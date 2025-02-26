@@ -1,0 +1,29 @@
+[project]
+name = "cattrs-ja"
+version = "0.1.0"
+description = "Japanese translation for cattrs"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "cattrs==24.1.2",
+    "sphinx-intl==2.3.1",
+]
+
+[dependency-groups]
+dev = [
+    "sphinx>=5.3.0",
+    "furo>=2024.1.29",
+    "sphinx-copybutton>=0.5.2",
+    "myst-parser>=1.0.0",
+    "pendulum>=2.1.2",
+    "sphinx-autobuild",
+    "typing-extensions>=4.8.0",
+    "ujson>=5.7.0",
+    "orjson>=3.9.2; implementation_name == \"cpython\"",
+    "msgpack>=1.0.5",
+    "PyYAML>=6.0",
+    "tomlkit>=0.11.8",
+    "cbor2>=5.4.6",
+    "pymongo>=4.4.0",
+    "msgspec>=0.18.5; implementation_name == \"cpython\"",
+]

@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Tin Tvrtković
+# This file is distributed under the same license as the cattrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cattrs 24.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-24 22:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../downloads/cattrs/docs/cattrs.gen.rst:2
+msgid "cattrs.gen package"
+msgstr "cattrs.gen パッケージ"
+
+#: cattrs.gen.make_dict_unstructure_fn:1 of
+msgid "Generate a specialized dict unstructuring function for an attrs class or a dataclass."
+msgstr "attrs クラスまたは dataclass のための特殊な dict アンストラクチャリング関数を生成します。"
+
+#: cattrs.gen.make_dict_structure_fn:4
+#: cattrs.gen.make_dict_structure_fn_from_attrs:5
+#: cattrs.gen.make_dict_unstructure_fn:4
+#: cattrs.gen.make_dict_unstructure_fn_from_attrs:5 of
+msgid "Any provided overrides are attached to the generated function under the `overrides` attribute."
+msgstr "指定されたオーバーライドはすべて、生成された関数の `overrides` 属性に付加されます。"
+
+#: ../../downloads/cattrs/docs/cattrs.gen.rst
+#: cattrs.gen.make_mapping_unstructure_fn cattrs.gen.mapping_structure_factory
+#: of
+msgid "Parameters"
+msgstr "パラメータ"
+
+#: cattrs.gen.make_dict_unstructure_fn:7
+#: cattrs.gen.make_dict_unstructure_fn_from_attrs:10 of
+msgid "if true, attributes equal to their default values will be omitted in the result dictionary."
+msgstr "true の場合、属性のデフォルト値と同じ値は結果の辞書で省略されます。"
+
+#: cattrs.gen.make_dict_structure_fn:15
+#: cattrs.gen.make_dict_structure_fn_from_attrs:16
+#: cattrs.gen.make_dict_unstructure_fn:9
+#: cattrs.gen.make_dict_unstructure_fn_from_attrs:12 of
+msgid "If true, the attribute alias will be used as the dictionary key by default."
+msgstr "true の場合、属性エイリアスはデフォルトで辞書のキーとして使用されます。"
+
+#: cattrs.gen.make_dict_structure_fn:17
+#: cattrs.gen.make_dict_structure_fn_from_attrs:18
+#: cattrs.gen.make_dict_unstructure_fn:11
+#: cattrs.gen.make_dict_unstructure_fn_from_attrs:14 of
+msgid "If true, _attrs_ fields marked as `init=False` will be included."
+msgstr "true の場合、`init=False` とマークされた _attrs_ フィールドが含まれます。"
+
+#: ../../downloads/cattrs/docs/cattrs.gen.rst
+#: cattrs.gen.make_mapping_unstructure_fn cattrs.gen.mapping_structure_factory
+#: of
+msgid "Return type"
+msgstr "戻り値の型"
+
+#: cattrs.gen.make_dict_structure_fn:20 cattrs.gen.make_dict_unstructure_fn:14
+#: of
+msgid "*_cattrs_use_alias*"
+msgstr "*_cattrs_use_alias*"
+
+#: cattrs.gen.make_dict_structure_fn:21 cattrs.gen.make_dict_unstructure_fn:15
+#: of
+msgid "*_cattrs_include_init_false*"
+msgstr "*_cattrs_include_init_false*"
+
+#: cattrs.gen.make_dict_structure_fn:1 of
+msgid "Generate a specialized dict structuring function for an attrs class or dataclass."
+msgstr "attrs クラスまたは dataclass のための特殊な dict ストラクチャリング関数を生成します。"
+
+#: cattrs.gen.make_dict_structure_fn:7
+#: cattrs.gen.make_dict_structure_fn_from_attrs:8
+#: cattrs.gen.typeddicts.make_dict_structure_fn:9 of
+msgid "Whether the structuring function should raise a `ForbiddenExtraKeysError` if unknown keys are encountered."
+msgstr "不明なキーが発生した場合に、ストラクチャリング関数が `ForbiddenExtraKeysError` を発生させるかどうか。"
+
+#: cattrs.gen.make_dict_structure_fn:9
+#: cattrs.gen.make_dict_structure_fn_from_attrs:10 of
+msgid "Whether to store the source code in the Python linecache."
+msgstr "ソースコードを Python の linecache に保存するかどうか。"
+
+#: cattrs.gen.make_dict_structure_fn:11
+#: cattrs.gen.make_dict_structure_fn_from_attrs:12 of
+msgid "If an _attrs_ converter is present on a field, use it instead of processing the field normally."
+msgstr "フィールドに _attrs_ コンバーターが存在する場合、フィールドを通常どおりに処理する代わりに、それを使用します。"
+
+#: cattrs.gen.make_dict_structure_fn:13
+#: cattrs.gen.make_dict_structure_fn_from_attrs:14
+#: cattrs.gen.typeddicts.make_dict_structure_fn:7 of
+msgid "Whether to use a slower mode that produces more detailed errors."
+msgstr "より詳細なエラーを生成する低速モードを使用するかどうか。"
+
+#: cattrs.gen.make_dict_structure_fn:22
+#: cattrs.gen.typeddicts.make_dict_structure_fn:14 of
+msgid "The `_cattrs_forbid_extra_keys` and `_cattrs_detailed_validation` parameters take their values from the given converter by default."
+msgstr "`_cattrs_forbid_extra_keys` および `_cattrs_detailed_validation` パラメーターは、デフォルトで指定されたコンバーターから値を取得します。"
+
+#: cattrs.gen.make_dict_structure_fn:25 of
+msgid "The `_cattrs_prefer_attrib_converters` parameter takes its value from the given converter by default."
+msgstr "`_cattrs_prefer_attrib_converters` パラメーターは、デフォルトで指定されたコンバーターから値を取得します。"
+
+#: cattrs.gen.iterable_unstructure_factory:1 of
+msgid "A hook factory for unstructuring iterables."
+msgstr "イテラブルをアンストラクチャリングするためのフックファクトリ。"
+
+#: cattrs.gen.iterable_unstructure_factory:3 of
+msgid "Force unstructuring to this type, if provided."
+msgstr "提供されている場合、この型へのアンストラクチャリングを強制します。"
+
+#: cattrs.gen.make_hetero_tuple_unstructure_fn:1 of
+msgid "Generate a specialized unstructure function for a heterogenous tuple."
+msgstr "異種タプルのための特殊なアンストラクチャリング関数を生成します。"
+
+#: cattrs.gen.make_hetero_tuple_unstructure_fn:3 of
+msgid "If provided, override the type arguments."
+msgstr "指定されている場合、型引数をオーバーライドします。"
+
+#: cattrs.gen.make_mapping_unstructure_fn:1 of
+msgid "Generate a specialized unstructure function for a mapping."
+msgstr "マッピングのための特殊なアンストラクチャリング関数を生成します。"
+
+#: cattrs.gen.mapping_structure_factory:1 of
+msgid "Generate a specialized structure function for a mapping."
+msgstr "マッピングのための特殊なストラクチャリング関数を生成します。"
+
+#: cattrs.gen.make_dict_unstructure_fn_from_attrs:1 of
+msgid "Generate a specialized dict unstructuring function for a list of attributes."
+msgstr "属性のリストのための特殊な dict アンストラクチャリング関数を生成します。"
+
+#: cattrs.gen.make_dict_structure_fn_from_attrs:3
+#: cattrs.gen.make_dict_unstructure_fn_from_attrs:3 of
+msgid "Usually used as a building block by more specialized hook factories."
+msgstr "通常、より特殊なフックファクトリの構成要素として使用されます。"
+
+#: cattrs.gen.make_dict_unstructure_fn_from_attrs:8 of
+msgid "The class for which the function is generated; used mostly for its name, module name and qualname."
+msgstr "関数が生成されるクラス。主に、その名前、モジュール名、および qualname に使用されます。"
+
+#: cattrs.gen.make_dict_structure_fn_from_attrs:1 of
+msgid "Generate a specialized dict structuring function for a list of attributes."
+msgstr "属性のリストのための特殊な dict ストラクチャリング関数を生成します。"
+
+#: ../../downloads/cattrs/docs/cattrs.gen.rst:10
+msgid "Submodules"
+msgstr "サブモジュール"
+
+#: ../../downloads/cattrs/docs/cattrs.gen.rst:13
+msgid "cattrs.gen.typeddicts module"
+msgstr "cattrs.gen.typeddicts モジュール"
+
+#: cattrs.gen.typeddicts.make_dict_unstructure_fn:1 of
+msgid "Generate a specialized dict unstructuring function for a TypedDict."
+msgstr "TypedDict のための特殊な dict アンストラクチャリング関数を生成します。"
+
+#: cattrs.gen.typeddicts.make_dict_structure_fn:3
+#: cattrs.gen.typeddicts.make_dict_unstructure_fn:3 of
+msgid "A `TypedDict` class."
+msgstr "`TypedDict` クラス。"
+
+#: cattrs.gen.typeddicts.make_dict_unstructure_fn:4 of
+msgid "A Converter instance to use for unstructuring nested fields."
+msgstr "ネストされたフィールドのアンストラクチャリングに使用する Converter インスタンス。"
+
+#: cattrs.gen.typeddicts.make_dict_structure_fn:5
+#: cattrs.gen.typeddicts.make_dict_unstructure_fn:5 of
+msgid "A mapping of field names to an `AttributeOverride`, for customization."
+msgstr "カスタマイズのために、フィールド名を `AttributeOverride` にマッピングします。"
+
+#: cattrs.gen.typeddicts.make_dict_structure_fn:11
+#: cattrs.gen.typeddicts.make_dict_unstructure_fn:7 of
+msgid "Whether to store the generated code in the _linecache_, for easier debugging and better stack traces."
+msgstr "デバッグを容易にし、スタックトレースを改善するために、生成されたコードを _linecache_ に保存するかどうか。"
+
+#: cattrs.gen.typeddicts.make_dict_structure_fn:1 of
+msgid "Generate a specialized dict structuring function for typed dicts."
+msgstr "型付き dict のための特殊な dict ストラクチャリング関数を生成します。"
+
+#: cattrs.gen.typeddicts.make_dict_structure_fn:4 of
+msgid "A Converter instance to use for structuring nested fields."
+msgstr "ネストされたフィールドのストラクチャリングに使用する Converter インスタンス。"
+

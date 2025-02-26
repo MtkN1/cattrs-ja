@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Tin Tvrtković
+# This file is distributed under the same license as the cattrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cattrs 24.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-24 22:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../downloads/cattrs/docs/validation.md:1
+msgid "Validation"
+msgstr "バリデーション"
+
+#: ../../downloads/cattrs/docs/validation.md:3
+msgid "_cattrs_ has a detailed validation mode since version 22.1.0, and this mode is enabled by default. When running under detailed validation, the structuring hooks are slightly slower but produce richer and more precise error messages. Unstructuring hooks are not affected."
+msgstr "_cattrs_ にはバージョン 22.1.0 から詳細なバリデーションモードがあり、デフォルトで有効になっています。詳細バリデーションを実行すると、ストラクチャリングフックは若干遅くなりますが、より豊富で正確なエラーメッセージが生成されます。アンストラクチャリングフックは影響を受けません。"
+
+#: ../../downloads/cattrs/docs/validation.md:7
+msgid "Detailed Validation"
+msgstr "詳細なバリデーション"
+
+#: ../../downloads/cattrs/docs/validation.md:12
+#, python-brace-format
+msgid "In detailed validation mode, any structuring errors will be grouped and raised together as a {class}`cattrs.BaseValidationError`, which is a [PEP 654 ExceptionGroup](https://www.python.org/dev/peps/pep-0654/). ExceptionGroups are special exceptions which contain lists of other exceptions, which may themselves be other ExceptionGroups. In essence, ExceptionGroups are trees of exceptions."
+msgstr "詳細バリデーションモードでは、ストラクチャリングエラーはグループ化され、{class}`cattrs.BaseValidationError` としてまとめて発生します。これは [PEP 654 ExceptionGroup](https://www.python.org/dev/peps/pep-0654/) です。ExceptionGroup は、他の例外のリストを含む特別な例外であり、それ自体が他の ExceptionGroup である可能性があります。本質的に、ExceptionGroup は例外のツリーです。"
+
+#: ../../downloads/cattrs/docs/validation.md:16
+#, python-brace-format
+msgid "When structuring a class, _cattrs_ will gather any exceptions on a field-by-field basis and raise them as a {class}`cattrs.ClassValidationError`, which is a subclass of {class}`BaseValidationError <cattrs.BaseValidationError>`."
+msgstr "クラスをストラクチャリングする際、_cattrs_ はフィールドごとに例外を収集し、{class}`cattrs.ClassValidationError` として発生させます。これは {class}`BaseValidationError <cattrs.BaseValidationError>` のサブクラスです。"
+
+#: ../../downloads/cattrs/docs/validation.md:18
+#, python-brace-format
+msgid "When structuring sequences and mappings, _cattrs_ will gather any exceptions on a key- or index-basis and raise them as a {class}`cattrs.IterableValidationError`, which is a subclass of {class}`BaseValidationError <cattrs.BaseValidationError>`."
+msgstr "シーケンスとマッピングをストラクチャリングする際、_cattrs_ はキーまたはインデックスごとに例外を収集し、{class}`cattrs.IterableValidationError` として発生させます。これは {class}`BaseValidationError <cattrs.BaseValidationError>` のサブクラスです。"
+
+#: ../../downloads/cattrs/docs/validation.md:20
+msgid "The exceptions will also have their `__notes__` attributes set, as per [PEP 678](https://www.python.org/dev/peps/pep-0678/), showing the field, key or index for each inner exception."
+msgstr "例外は、[PEP 678](https://www.python.org/dev/peps/pep-0678/) に従って、`__notes__` 属性が設定され、内部例外ごとにフィールド、キー、またはインデックスが表示されます。"
+
+#: ../../downloads/cattrs/docs/validation.md:22
+msgid "A simple example involving a class containing a list and a dictionary:"
+msgstr "リストと辞書を含むクラスの簡単な例:"
+
+#: ../../downloads/cattrs/docs/validation.md:70
+msgid "Transforming Exceptions into Error Messages"
+msgstr "例外をエラーメッセージに変換する"
+
+#: ../../downloads/cattrs/docs/validation.md:76
+#, python-brace-format
+msgid "ExceptionGroup stack traces are useful while developing, but sometimes a more compact representation of validation errors is required. _cattrs_ provides a helper function, {func}`cattrs.transform_error`, which transforms validation errors into lists of error messages."
+msgstr "ExceptionGroup のスタックトレースは開発中に役立ちますが、バリデーションエラーのよりコンパクトな表現が必要になる場合があります。_cattrs_ は、バリデーションエラーをエラーメッセージのリストに変換するヘルパー関数 {func}`cattrs.transform_error` を提供します。"
+
+#: ../../downloads/cattrs/docs/validation.md:79
+msgid "The example from the previous paragraph produces the following error messages:"
+msgstr "前の段落の例では、次のエラーメッセージが生成されます:"
+
+#: ../../downloads/cattrs/docs/validation.md:99
+#, python-brace-format
+msgid "A small number of built-in exceptions are converted into error messages automatically. This can be further customized by providing {func}`cattrs.transform_error` with a function that it can use to turn individual, non-ExceptionGroup exceptions into error messages. A useful pattern is wrapping the default, {func}`cattrs.v.format_exception` function."
+msgstr "少数の組み込み例外は、自動的にエラーメッセージに変換されます。これは、個々の ExceptionGroup 以外の例外をエラーメッセージに変換するために使用できる関数を {func}`cattrs.transform_error` に提供することで、さらにカスタマイズできます。便利なパターンは、デフォルトの {func}`cattrs.v.format_exception` 関数をラップすることです。"
+
+#: ../../downloads/cattrs/docs/validation.md:117
+#, python-brace-format
+msgid "If even more customization is required, {func}`cattrs.transform_error` can be copied over into your codebase and adjusted as needed."
+msgstr "さらにカスタマイズが必要な場合は、{func}`cattrs.transform_error` をコードベースにコピーして、必要に応じて調整できます。"
+
+#: ../../downloads/cattrs/docs/validation.md:119
+msgid "Non-detailed Validation"
+msgstr "詳細でないバリデーション"
+
+#: ../../downloads/cattrs/docs/validation.md:121
+msgid "Non-detailed validation can be enabled by initializing any of the converters with `detailed_validation=False`. In this mode, any errors during un/structuring will bubble up directly as soon as they happen."
+msgstr "詳細でないバリデーションは、いずれかのコンバーターを `detailed_validation=False` で初期化することで有効にできます。このモードでは、アン/ストラクチャリング中のエラーは、発生するとすぐに直接バブルアップします。"
+

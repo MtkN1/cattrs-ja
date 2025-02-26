@@ -1,0 +1,661 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Tin Tvrtković
+# This file is distributed under the same license as the cattrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cattrs 24.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-24 22:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../downloads/cattrs/docs/cattrs.rst:2
+msgid "cattrs package"
+msgstr "cattrs パッケージ"
+
+#: cattrs.converters.BaseConverter.structure:1 of
+msgid "Convert unstructured Python data structures to structured data."
+msgstr "構造化されていない Python のデータ構造を構造化データに変換します。"
+
+#: ../../downloads/cattrs/docs/cattrs.rst cattrs._compat.is_frozenset
+#: cattrs._compat.is_mapping cattrs._compat.is_mutable_set
+#: cattrs._compat.is_sequence cattrs.cols.is_namedtuple
+#: cattrs.cols.list_structure_factory cattrs.cols.namedtuple_structure_factory
+#: cattrs.converters.BaseConverter.register_structure_hook_func
+#: cattrs.converters.BaseConverter.register_unstructure_hook_func
+#: cattrs.converters.BaseConverter.structure
+#: cattrs.converters.BaseConverter.structure_attrs_fromdict
+#: cattrs.converters.BaseConverter.structure_attrs_fromtuple
+#: cattrs.converters.BaseConverter.unstructure_attrs_asdict
+#: cattrs.converters.BaseConverter.unstructure_attrs_astuple
+#: cattrs.converters.Converter.gen_structure_typeddict
+#: cattrs.converters.Converter.gen_unstructure_optional
+#: cattrs.converters.Converter.gen_unstructure_typeddict
+#: cattrs.disambiguators.is_supported_union
+#: cattrs.dispatch.FunctionDispatch.dispatch
+#: cattrs.dispatch.MultiStrategyDispatch.dispatch_without_caching
+#: cattrs.dispatch.MultiStrategyDispatch.register_cls_list
+#: cattrs.errors.ForbiddenExtraKeysError
+#: cattrs.errors.StructureHandlerNotFoundError cattrs.fns.identity
+#: cattrs.fns.raise_error cattrs.gen.mapping_structure_factory of
+msgid "Parameters"
+msgstr "パラメータ"
+
+#: ../../downloads/cattrs/docs/cattrs.rst cattrs._compat.is_frozenset
+#: cattrs._compat.is_mapping cattrs._compat.is_mutable_set
+#: cattrs._compat.is_sequence cattrs.cols.is_any_set cattrs.cols.is_namedtuple
+#: cattrs.cols.list_structure_factory cattrs.cols.namedtuple_structure_factory
+#: cattrs.converters.BaseConverter.register_structure_hook_func
+#: cattrs.converters.BaseConverter.register_unstructure_hook_func
+#: cattrs.converters.BaseConverter.structure
+#: cattrs.converters.BaseConverter.structure_attrs_fromdict
+#: cattrs.converters.BaseConverter.structure_attrs_fromtuple
+#: cattrs.converters.BaseConverter.unstructure_attrs_asdict
+#: cattrs.converters.BaseConverter.unstructure_attrs_astuple
+#: cattrs.converters.Converter.gen_structure_annotated
+#: cattrs.converters.Converter.gen_structure_typeddict
+#: cattrs.converters.Converter.gen_unstructure_optional
+#: cattrs.converters.Converter.gen_unstructure_typeddict
+#: cattrs.disambiguators.is_supported_union
+#: cattrs.dispatch.FunctionDispatch.dispatch
+#: cattrs.dispatch.MultiStrategyDispatch.clear_cache
+#: cattrs.dispatch.MultiStrategyDispatch.clear_direct
+#: cattrs.dispatch.MultiStrategyDispatch.dispatch_without_caching
+#: cattrs.dispatch.MultiStrategyDispatch.register_cls_list
+#: cattrs.errors.ClassValidationError.group_exceptions
+#: cattrs.errors.ForbiddenExtraKeysError
+#: cattrs.errors.IterableValidationError.group_exceptions
+#: cattrs.errors.StructureHandlerNotFoundError cattrs.fns.identity
+#: cattrs.fns.raise_error cattrs.gen.mapping_structure_factory of
+msgid "Return type"
+msgstr "戻り値の型"
+
+#: cattrs.converters.BaseConverter.get_structure_hook:1 of
+msgid "Get the structure hook for the given type."
+msgstr "指定された型の構造フックを取得します。"
+
+#: cattrs.converters.BaseConverter.get_structure_hook:3
+#: cattrs.converters.BaseConverter.get_unstructure_hook:3 of
+msgid "This hook can be manually called, or composed with other functions and re-registered."
+msgstr "このフックは手動で呼び出すか、他の関数と組み合わせて再登録できます。"
+
+#: cattrs.converters.BaseConverter.get_structure_hook:6 of
+msgid "If no hook is registered, the converter structure fallback factory will be used to produce one."
+msgstr "フックが登録されていない場合、コンバーターの構造フォールバックファクトリを使用してフックが生成されます。"
+
+#: cattrs.converters.BaseConverter.get_structure_hook:9
+#: cattrs.converters.BaseConverter.get_unstructure_hook:9 of
+msgid "Whether to cache the returned hook."
+msgstr "返されたフックをキャッシュするかどうか。"
+
+#: cattrs.converters.BaseConverter.get_unstructure_hook:1 of
+msgid "Get the unstructure hook for the given type."
+msgstr "指定された型の非構造化フックを取得します。"
+
+#: cattrs.converters.BaseConverter.get_unstructure_hook:6 of
+msgid "If no hook is registered, the converter unstructure fallback factory will be used to produce one."
+msgstr "フックが登録されていない場合、コンバーターの非構造化フォールバックファクトリを使用してフックが生成されます。"
+
+#: cattrs.converters.BaseConverter.register_structure_hook_func:1
+#: cattrs.converters.BaseConverter.register_unstructure_hook_func:1 of
+msgid "Register a class-to-primitive converter function for a class, using a function to check if it's a match."
+msgstr "クラスが一致するかどうかを関数で確認し、クラスからプリミティブへのコンバーター関数をクラスに登録します。"
+
+#: cattrs.converters.BaseConverter.register_structure_hook:1 of
+msgid "Register a primitive-to-class converter function for a type."
+msgstr "型に対して、プリミティブからクラスへのコンバーター関数を登録します。"
+
+#: cattrs.converters.BaseConverter.register_structure_hook:3 of
+msgid "The converter function should take two arguments:"
+msgstr "コンバーター関数は、次の 2 つの引数を受け取る必要があります:"
+
+#: cattrs.converters.BaseConverter.register_structure_hook:4 of
+msgid "a Python object to be converted,"
+msgstr "変換される Python オブジェクト"
+
+#: cattrs.converters.BaseConverter.register_structure_hook:5 of
+msgid "the type to convert to"
+msgstr "変換先の型"
+
+#: cattrs.converters.BaseConverter.register_structure_hook:7 of
+msgid "and return the instance of the class. The type may seem redundant, but is sometimes needed (for example, when dealing with generic classes)."
+msgstr "そして、クラスのインスタンスを返します。型は冗長に見えるかもしれませんが、(たとえば、ジェネリッククラスを扱う場合など)  必要な場合があります。"
+
+#: cattrs.converters.BaseConverter.register_structure_hook:10 of
+msgid "This method may be used as a decorator. In this case, the decorated hook must have a return type annotation, and this annotation will be used as the type for the hook."
+msgstr "このメソッドはデコレーターとして使用できます。この場合、装飾されたフックは戻り値の型注釈を持つ必要があり、この注釈はフックの型として使用されます。"
+
+#: cattrs.converters.BaseConverter.register_structure_hook:14
+#: cattrs.converters.BaseConverter.register_unstructure_hook:10 of
+msgid "This method may now be used as a decorator."
+msgstr "このメソッドはデコレーターとして使用できるようになりました。"
+
+#: cattrs.converters.BaseConverter.register_unstructure_hook:1 of
+msgid "Register a class-to-primitive converter function for a class."
+msgstr "クラスからプリミティブへのコンバーター関数をクラスに登録します。"
+
+#: cattrs.converters.BaseConverter.register_unstructure_hook:3 of
+msgid "The converter function should take an instance of the class and return its Python equivalent."
+msgstr "コンバーター関数は、クラスのインスタンスを受け取り、それに対応する Python の値を返す必要があります。"
+
+#: cattrs.converters.BaseConverter.register_unstructure_hook:6 of
+msgid "May also be used as a decorator. When used as a decorator, the first argument annotation from the decorated function will be used as the type to register the hook for."
+msgstr "デコレーターとして使用することもできます。デコレーターとして使用する場合、装飾された関数の最初の引数の注釈が、フックを登録する型として使用されます。"
+
+#: cattrs.converters.BaseConverter.structure_attrs_fromdict:1 of
+msgid "Instantiate an attrs class from a mapping (dict)."
+msgstr "マッピング (dict)  から attrs クラスをインスタンス化します。"
+
+#: cattrs.converters.BaseConverter.structure_attrs_fromtuple:1 of
+msgid "Load an attrs class from a sequence (tuple)."
+msgstr "シーケンス (タプル)  から attrs クラスをロードします。"
+
+#: ../../docstring cattrs.global_converter:1 of
+msgid "The global converter. Prefer creating your own if customizations are required."
+msgstr "グローバルコンバーター。カスタマイズが必要な場合は、独自のコンバーターを作成することをお勧めします。"
+
+#: cattrs.converters.BaseConverter:1 cattrs.dispatch.FunctionDispatch:1 of
+msgid "Bases: :py:class:`object`"
+msgstr "基底クラス: :py:class:`object`"
+
+#: cattrs.converters.BaseConverter:1 of
+msgid "Converts between structured and unstructured data."
+msgstr "構造化データと非構造化データを変換します。"
+
+#: cattrs.converters.BaseConverter:3 cattrs.converters.BaseConverter.copy:3
+#: cattrs.converters.Converter:3 cattrs.converters.Converter.copy:3 of
+msgid "Whether to use a slightly slower mode for detailed validation errors."
+msgstr "詳細な検証エラーのために、わずかに遅いモードを使用するかどうか。"
+
+#: cattrs.converters.BaseConverter:5 cattrs.converters.Converter:5 of
+msgid "A hook factory to be called when no registered unstructuring hooks match."
+msgstr "登録されている非構造化フックが一致しない場合に呼び出されるフックファクトリ。"
+
+#: cattrs.converters.BaseConverter:7 cattrs.converters.Converter:7 of
+msgid "A hook factory to be called when no registered structuring hooks match."
+msgstr "登録されている構造化フックが一致しない場合に呼び出されるフックファクトリ。"
+
+#: cattrs.converters.BaseConverter:10 cattrs.converters.Converter:10 of
+msgid "*unstructure_fallback_factory*"
+msgstr "*unstructure_fallback_factory*"
+
+#: cattrs.converters.BaseConverter:11 cattrs.converters.Converter:11 of
+msgid "*structure_fallback_factory*"
+msgstr "*structure_fallback_factory*"
+
+#: cattrs.converters.BaseConverter.copy:1 cattrs.converters.Converter.copy:1 of
+msgid "Create a copy of the converter, keeping all existing custom hooks."
+msgstr "既存のカスタムフックをすべて保持して、コンバーターのコピーを作成します。"
+
+#: cattrs.converters.BaseConverter.register_structure_hook_factory:1
+#: cattrs.converters.BaseConverter.register_unstructure_hook_factory:1
+#: cattrs.converters.Converter.register_structure_hook_factory:1
+#: cattrs.converters.Converter.register_unstructure_hook_factory:1 of
+msgid "Register a hook factory for a given predicate."
+msgstr "指定された述語のフックファクトリを登録します。"
+
+#: cattrs.converters.BaseConverter.register_structure_hook_factory:3
+#: cattrs.converters.BaseConverter.register_unstructure_hook_factory:3
+#: cattrs.converters.Converter.register_structure_hook_factory:3
+#: cattrs.converters.Converter.register_unstructure_hook_factory:3 of
+msgid "The hook factory may expose an additional required parameter. In this case, the current converter will be provided to the hook factory as that parameter."
+msgstr "フックファクトリは、追加の必須パラメータを公開する場合があります。この場合、現在のコンバーターは、そのパラメータとしてフックファクトリに提供されます。"
+
+#: cattrs.converters.BaseConverter.register_structure_hook_factory:7
+#: cattrs.converters.BaseConverter.register_unstructure_hook_factory:7
+#: cattrs.converters.Converter.register_structure_hook_factory:7
+#: cattrs.converters.Converter.register_unstructure_hook_factory:7 of
+msgid "May also be used as a decorator."
+msgstr "デコレーターとして使用することもできます。"
+
+#: cattrs.converters.BaseConverter.register_structure_hook_factory:9
+#: cattrs.converters.BaseConverter.register_unstructure_hook_factory:9
+#: cattrs.converters.Converter.register_structure_hook_factory:9
+#: cattrs.converters.Converter.register_unstructure_hook_factory:9 of
+msgid "A function that, given a type, returns whether the factory can produce a hook for that type."
+msgstr "型を指定すると、ファクトリがその型のフックを生成できるかどうかを返す関数。"
+
+#: cattrs.converters.BaseConverter.register_structure_hook_factory:11
+#: cattrs.converters.Converter.register_structure_hook_factory:11 of
+msgid "A callable that, given a type, produces a structuring hook for that type. This structuring hook will be cached."
+msgstr "型を指定すると、その型の構造化フックを生成する呼び出し可能オブジェクト。この構造化フックはキャッシュされます。"
+
+#: cattrs.converters.BaseConverter.register_structure_hook_factory:14
+#: cattrs.converters.BaseConverter.register_unstructure_hook_factory:14
+#: cattrs.converters.Converter.register_structure_hook_factory:14
+#: cattrs.converters.Converter.register_unstructure_hook_factory:14 of
+msgid "This method may now be used as a decorator. The factory may also receive the converter as a second, required argument."
+msgstr "このメソッドはデコレーターとして使用できるようになりました。ファクトリは、2 番目の必須引数としてコンバーターを受け取ることもできます。"
+
+#: cattrs.converters.BaseConverter.register_unstructure_hook_factory:11
+#: cattrs.converters.Converter.register_unstructure_hook_factory:11 of
+msgid "A callable that, given a type, produces an unstructuring hook for that type. This unstructuring hook will be cached."
+msgstr "型を指定すると、その型の非構造化フックを生成する呼び出し可能オブジェクト。この非構造化フックはキャッシュされます。"
+
+#: cattrs.BaseConverter.unstruct_strat:1 of
+msgid "The default way of unstructuring ``attrs`` classes."
+msgstr "``attrs`` クラスを非構造化するデフォルトの方法。"
+
+#: cattrs.converters.BaseConverter.unstructure_attrs_asdict:1 of
+msgid "Our version of `attrs.asdict`, so we can call back to us."
+msgstr "`attrs.asdict` のバージョン。これにより、コールバックできます。"
+
+#: cattrs.converters.BaseConverter.unstructure_attrs_astuple:1 of
+msgid "Our version of `attrs.astuple`, so we can call back to us."
+msgstr "`attrs.astuple` のバージョン。これにより、コールバックできます。"
+
+#: cattrs.converters.Converter:1 of
+msgid "Bases: :py:class:`~cattrs.converters.BaseConverter`"
+msgstr "基底クラス: :py:class:`~cattrs.converters.BaseConverter`"
+
+#: cattrs.converters.Converter:1 of
+msgid "A converter which generates specialized un/structuring functions."
+msgstr "特殊化された非構造化/構造化関数を生成するコンバーター。"
+
+#: cattrs.converters.Converter.gen_structure_annotated:1 of
+msgid "A hook factory for annotated types."
+msgstr "注釈付きの型のフックファクトリ。"
+
+#: cattrs.converters.Converter.gen_structure_typeddict:1 of
+msgid "Generate a TypedDict structure function."
+msgstr "TypedDict 構造関数を生成します。"
+
+#: cattrs.converters.Converter.gen_structure_typeddict:3
+#: cattrs.converters.Converter.gen_unstructure_typeddict:3 of
+msgid "Also apply converter-scored modifications."
+msgstr "コンバータースコアの変更も適用します。"
+
+#: cattrs.converters.Converter.gen_unstructure_optional:1 of
+msgid "Generate an unstructuring hook for optional types."
+msgstr "オプションの型の非構造化フックを生成します。"
+
+#: cattrs.converters.Converter.gen_unstructure_typeddict:1 of
+msgid "Generate a TypedDict unstructure function."
+msgstr "TypedDict 非構造化関数を生成します。"
+
+#: cattrs.errors.AttributeValidationNote:1
+#: cattrs.errors.IterableValidationNote:1 of
+msgid "Bases: :py:class:`str`"
+msgstr "基底クラス: :py:class:`str`"
+
+#: cattrs.errors.AttributeValidationNote:1 of
+msgid "Attached as a note to an exception when an attribute fails structuring."
+msgstr "属性の構造化に失敗した場合、例外への注釈として添付されます。"
+
+#: cattrs.errors.BaseValidationError:1 of
+msgid "Bases: :py:class:`ExceptionGroup`"
+msgstr "基底クラス: :py:class:`ExceptionGroup`"
+
+#: cattrs.errors.ClassValidationError:1 cattrs.errors.IterableValidationError:1
+#: of
+msgid "Bases: :py:class:`~cattrs.errors.BaseValidationError`"
+msgstr "基底クラス: :py:class:`~cattrs.errors.BaseValidationError`"
+
+#: cattrs.errors.ClassValidationError:1 of
+msgid "Raised when validating a class if any attributes are invalid."
+msgstr "属性が無効な場合にクラスを検証すると発生します。"
+
+#: cattrs.errors.ClassValidationError.group_exceptions:1
+#: cattrs.errors.IterableValidationError.group_exceptions:1 of
+msgid "Split the exceptions into two groups: with and without validation notes."
+msgstr "例外を、検証ノートの有無にかかわらず、2 つのグループに分割します。"
+
+#: cattrs.errors.ForbiddenExtraKeysError:1
+#: cattrs.errors.StructureHandlerNotFoundError:1 of
+msgid "Bases: :py:class:`Exception`"
+msgstr "基底クラス: :py:class:`Exception`"
+
+#: cattrs.errors.ForbiddenExtraKeysError:1 of
+msgid "Raised when `forbid_extra_keys` is activated and such extra keys are detected during structuring."
+msgstr "`forbid_extra_keys` がアクティブ化され、構造化中にそのような余分なキーが検出された場合に発生します。"
+
+#: cattrs.errors.ForbiddenExtraKeysError:4 of
+msgid "The attribute `extra_fields` is a sequence of those extra keys, which were the cause of this error, and `cl` is the class which was structured with those extra keys."
+msgstr "属性 `extra_fields` は、このエラーの原因となった余分なキーのシーケンスであり、`cl` は、それらの余分なキーで構造化されたクラスです。"
+
+#: cattrs.errors.IterableValidationError:1 of
+msgid "Raised when structuring an iterable."
+msgstr "iterable を構造化する際に発生します。"
+
+#: cattrs.errors.IterableValidationNote:1 of
+msgid "Attached as a note to an exception when an iterable element fails structuring."
+msgstr "iterable 要素の構造化に失敗した場合、例外への注釈として添付されます。"
+
+#: cattrs.gen.override:1 of
+msgid "Override how a particular field is handled."
+msgstr "特定のフィールドの処理方法をオーバーライドします。"
+
+#: cattrs.gen.override:3 of
+msgid "Whether to skip the field or not. `None` means apply default handling."
+msgstr "フィールドをスキップするかどうか。`None` は、デフォルトの処理を適用することを意味します。"
+
+#: cattrs.errors.StructureHandlerNotFoundError:1 of
+msgid "Error raised when structuring cannot find a handler for converting inputs into :attr:`type_`."
+msgstr "構造化が、入力を :attr:`type_` に変換するためのハンドラーを見つけられない場合に発生するエラー。"
+
+#: cattrs.v.transform_error:1 of
+msgid "Transform an exception into a list of error messages."
+msgstr "例外をエラーメッセージのリストに変換します。"
+
+#: cattrs.v.transform_error:3 of
+msgid "To get detailed error messages, the exception should be produced by a converter with `detailed_validation` set."
+msgstr "詳細なエラーメッセージを取得するには、例外は `detailed_validation` が設定されたコンバーターによって生成される必要があります。"
+
+#: cattrs.v.transform_error:6 of
+#, python-brace-format
+msgid "By default, the error messages are in the form of `{description} @ {path}`."
+msgstr "デフォルトでは、エラーメッセージは `{description} @ {path}` の形式です。"
+
+#: cattrs.v.transform_error:8 of
+msgid "While traversing the exception and subexceptions, the path is formed:"
+msgstr "例外とサブ例外をトラバースする間、パスは次のように形成されます:"
+
+#: cattrs.v.transform_error:10 of
+#, python-brace-format
+msgid "by appending `.{field_name}` for fields in classes"
+msgstr "クラスのフィールドには `.{field_name}` を追加します"
+
+#: cattrs.v.transform_error:11 of
+#, python-brace-format
+msgid "by appending `[{int}]` for indices in iterables, like lists"
+msgstr "リストのような iterable のインデックスには `[{int}]` を追加します"
+
+#: cattrs.v.transform_error:12 of
+#, python-brace-format
+msgid "by appending `[{str}]` for keys in mappings, like dictionaries"
+msgstr "辞書のようなマッピングのキーには `[{str}]` を追加します"
+
+#: cattrs.v.transform_error:14 of
+msgid "The exception to transform into error messages."
+msgstr "エラーメッセージに変換する例外。"
+
+#: cattrs.v.transform_error:15 of
+msgid "The root path to use."
+msgstr "使用するルートパス。"
+
+#: cattrs.v.transform_error:16 of
+msgid "A callable to use to transform `Exceptions` into string descriptions of errors."
+msgstr "`Exceptions` をエラーの文字列記述に変換するために使用する呼び出し可能オブジェクト。"
+
+#: cattrs.converters.UnstructureStrategy:1 of
+msgid "Bases: :py:class:`~enum.Enum`"
+msgstr "基底クラス: :py:class:`~enum.Enum`"
+
+#: cattrs.converters.UnstructureStrategy:1 of
+msgid "`attrs` classes unstructuring strategies."
+msgstr "`attrs` クラスの非構造化戦略。"
+
+#: ../../downloads/cattrs/docs/cattrs.rst:10
+msgid "Subpackages"
+msgstr "サブパッケージ"
+
+#: ../../downloads/cattrs/docs/cattrs.rst:20
+msgid "Submodules"
+msgstr "サブモジュール"
+
+#: ../../downloads/cattrs/docs/cattrs.rst:23
+msgid "cattrs.cols module"
+msgstr "cattrs.cols モジュール"
+
+#: cattrs.cols:1 of
+msgid "Utility functions for collections."
+msgstr "コレクションのユーティリティ関数。"
+
+#: cattrs.cols.is_any_set:1 of
+msgid "A predicate function for both mutable and frozensets."
+msgstr "ミュータブルセットとフローズンセットの両方の述語関数。"
+
+#: cattrs._compat.is_frozenset:1 of
+msgid "A predicate function for frozensets."
+msgstr "フローズンセットの述語関数。"
+
+#: cattrs._compat.is_frozenset:3 of
+msgid "Matches built-in frozensets and frozensets from the typing module."
+msgstr "組み込みのフローズンセットと typing モジュールのフローズンセットに一致します。"
+
+#: cattrs.cols.is_namedtuple:1 of
+msgid "A predicate function for named tuples."
+msgstr "名前付きタプルの述語関数。"
+
+#: cattrs._compat.is_mapping:1 of
+msgid "A predicate function for mappings."
+msgstr "マッピングの述語関数。"
+
+#: cattrs._compat.is_mutable_set:1 of
+msgid "A predicate function for (mutable) sets."
+msgstr "(ミュータブル)  セットの述語関数。"
+
+#: cattrs._compat.is_mutable_set:3 of
+msgid "Matches built-in sets and sets from the typing module."
+msgstr "組み込みのセットと typing モジュールのセットに一致します。"
+
+#: cattrs._compat.is_sequence:1 of
+msgid "A predicate function for sequences."
+msgstr "シーケンスの述語関数。"
+
+#: cattrs._compat.is_sequence:3 of
+msgid "Matches lists, sequences, mutable sequences, deques and homogenous tuples."
+msgstr "リスト、シーケンス、ミュータブルシーケンス、deque、および同種のタプルに一致します。"
+
+#: cattrs.gen.iterable_unstructure_factory:1 of
+msgid "A hook factory for unstructuring iterables."
+msgstr "iterable を非構造化するためのフックファクトリ。"
+
+#: cattrs.cols.namedtuple_unstructure_factory:3
+#: cattrs.gen.iterable_unstructure_factory:3 of
+msgid "Force unstructuring to this type, if provided."
+msgstr "提供されている場合、この型への非構造化を強制します。"
+
+#: cattrs.cols.list_structure_factory:1 of
+msgid "A hook factory for structuring lists."
+msgstr "リストを構造化するためのフックファクトリ。"
+
+#: cattrs.cols.list_structure_factory:3 of
+msgid "Converts any given iterable into a list."
+msgstr "指定された iterable をリストに変換します。"
+
+#: cattrs.cols.namedtuple_structure_factory:1 of
+msgid "A hook factory for structuring namedtuples from iterables."
+msgstr "iterable から namedtuple を構造化するためのフックファクトリ。"
+
+#: cattrs.cols.namedtuple_unstructure_factory:1 of
+msgid "A hook factory for unstructuring namedtuples."
+msgstr "namedtuple を非構造化するためのフックファクトリ。"
+
+#: cattrs.cols.namedtuple_dict_structure_factory:1 of
+msgid "A hook factory for hooks structuring namedtuples from dictionaries."
+msgstr "辞書から namedtuple を構造化するフックのフックファクトリ。"
+
+#: cattrs.cols.namedtuple_dict_structure_factory:3 of
+msgid "Whether the hook should raise a `ForbiddenExtraKeysError` if unknown keys are encountered."
+msgstr "不明なキーが発生した場合、フックが `ForbiddenExtraKeysError` を発生させるかどうか。"
+
+#: cattrs.cols.namedtuple_dict_structure_factory:5
+#: cattrs.cols.namedtuple_dict_unstructure_factory:5 of
+msgid "Whether to store the source code in the Python linecache."
+msgstr "ソースコードを Python の linecache に保存するかどうか。"
+
+#: cattrs.cols.namedtuple_dict_unstructure_factory:1 of
+msgid "A hook factory for hooks unstructuring namedtuples to dictionaries."
+msgstr "namedtuple を辞書に非構造化するフックのフックファクトリ。"
+
+#: cattrs.cols.namedtuple_dict_unstructure_factory:3 of
+msgid "When true, attributes equal to their default values will be omitted in the result dictionary."
+msgstr "true の場合、デフォルト値と等しい属性は結果の辞書で省略されます。"
+
+#: cattrs.gen.mapping_structure_factory:1 of
+msgid "Generate a specialized structure function for a mapping."
+msgstr "マッピングの特殊化された構造関数を生成します。"
+
+#: ../../downloads/cattrs/docs/cattrs.rst:31
+msgid "cattrs.disambiguators module"
+msgstr "cattrs.disambiguators モジュール"
+
+#: cattrs.disambiguators:1 of
+msgid "Utilities for union (sum type) disambiguation."
+msgstr "共用体 (sum 型)  の曖昧さ回避のためのユーティリティ。"
+
+#: cattrs.disambiguators.is_supported_union:1 of
+msgid "Whether the type is a union of attrs classes."
+msgstr "型が attrs クラスの共用体であるかどうか。"
+
+#: cattrs.disambiguators.create_default_dis_func:1 of
+msgid "Given attrs classes or dataclasses, generate a disambiguation function."
+msgstr "attrs クラスまたは dataclass が与えられた場合、曖昧さ回避関数を生成します。"
+
+#: cattrs.disambiguators.create_default_dis_func:3 of
+msgid "The function is based on unique fields without defaults or unique values."
+msgstr "この関数は、デフォルトまたは一意の値を持たない一意のフィールドに基づいています。"
+
+#: cattrs.disambiguators.create_default_dis_func:5 of
+msgid "Whether to try using fields annotated as literals for disambiguation."
+msgstr "リテラルとして注釈が付けられたフィールドを曖昧さ回避に使用するかどうかを試します。"
+
+#: cattrs.disambiguators.create_default_dis_func:7 of
+msgid "Attribute overrides to apply."
+msgstr "適用する属性のオーバーライド。"
+
+#: cattrs.disambiguators.create_default_dis_func:9 of
+msgid "Dataclasses are now supported."
+msgstr "Dataclass がサポートされるようになりました。"
+
+#: ../../downloads/cattrs/docs/cattrs.rst:39
+msgid "cattrs.dispatch module"
+msgstr "cattrs.dispatch モジュール"
+
+#: cattrs.dispatch.FunctionDispatch:1 of
+msgid "FunctionDispatch is similar to functools.singledispatch, but instead dispatches based on functions that take the type of the first argument in the method, and return True or False."
+msgstr "FunctionDispatch は functools.singledispatch に似ていますが、メソッドの最初の引数の型を受け取り、True または False を返す関数に基づいてディスパッチします。"
+
+#: cattrs.dispatch.FunctionDispatch:5 of
+msgid "objects that help determine dispatch should be instantiated objects."
+msgstr "ディスパッチの決定に役立つオブジェクトは、インスタンス化されたオブジェクトである必要があります。"
+
+#: cattrs.dispatch.FunctionDispatch:7 cattrs.dispatch.MultiStrategyDispatch:4
+#: of
+msgid "A converter to be used for factories that require converters."
+msgstr "コンバーターを必要とするファクトリに使用されるコンバーター。"
+
+#: cattrs.dispatch.FunctionDispatch:9 cattrs.dispatch.MultiStrategyDispatch:10
+#: of
+msgid "Support for factories that require converters, hence this requires a converter when creating."
+msgstr "コンバーターを必要とするファクトリのサポート。したがって、これを作成するときにコンバーターが必要です。"
+
+#: cattrs.dispatch.FunctionDispatch:13 of
+msgid "Method generated by attrs for class FunctionDispatch."
+msgstr "クラス FunctionDispatch の attrs によって生成されたメソッド。"
+
+#: cattrs.dispatch.FunctionDispatch.dispatch:1 of
+msgid "Return the appropriate handler for the object passed."
+msgstr "渡されたオブジェクトの適切なハンドラーを返します。"
+
+#: cattrs.dispatch.MultiStrategyDispatch:1 of
+msgid "Bases: :py:class:`~typing.Generic`\\ [:py:obj:`~cattrs.dispatch.Hook`]"
+msgstr "基底クラス: :py:class:`~typing.Generic`\\ [:py:obj:`~cattrs.dispatch.Hook`]"
+
+#: cattrs.dispatch.MultiStrategyDispatch:1 of
+msgid "MultiStrategyDispatch uses a combination of exact-match dispatch, singledispatch, and FunctionDispatch."
+msgstr "MultiStrategyDispatch は、完全一致ディスパッチ、singledispatch、および FunctionDispatch の組み合わせを使用します。"
+
+#: cattrs.dispatch.MultiStrategyDispatch:5 of
+msgid "A hook factory to be called when a hook cannot be produced."
+msgstr "フックを生成できない場合に呼び出されるフックファクトリ。"
+
+#: cattrs.dispatch.MultiStrategyDispatch:8 of
+msgid "Fallbacks are now factories."
+msgstr "フォールバックはファクトリになりました。"
+
+#: cattrs.dispatch.MultiStrategyDispatch.dispatch_without_caching:1 of
+msgid "Dispatch on the type but without caching the result."
+msgstr "型に基づいてディスパッチしますが、結果はキャッシュしません。"
+
+#: cattrs.dispatch.MultiStrategyDispatch.register_cls_list:1 of
+msgid "Register a class to direct or singledispatch."
+msgstr "クラスを登録して、直接ディスパッチまたは singledispatch を行います。"
+
+#: cattrs.dispatch.MultiStrategyDispatch.register_func_list:1 of
+msgid "Register a predicate function to determine if the handler should be used for the type."
+msgstr "述語関数を登録して、その型に対してハンドラーを使用する必要があるかどうかを判断します。"
+
+#: cattrs.dispatch.MultiStrategyDispatch.register_func_list:4 of
+msgid "The list of predicates and their associated handlers. If a handler is registered in `extended` mode, it's a factory that requires a converter."
+msgstr "述語のリストとそれに関連付けられたハンドラー。ハンドラーが `extended` モードで登録されている場合、それはコンバーターを必要とするファクトリーです。"
+
+#: cattrs.dispatch.MultiStrategyDispatch.clear_direct:1 of
+msgid "Clear the direct dispatch."
+msgstr "直接ディスパッチをクリアします。"
+
+#: cattrs.dispatch.MultiStrategyDispatch.clear_cache:1 of
+msgid "Clear all caches."
+msgstr "すべてのキャッシュをクリアします。"
+
+#: ../../downloads/cattrs/docs/cattrs.rst:47
+msgid "cattrs.errors module"
+msgstr "cattrs.errors モジュール"
+
+#: ../../downloads/cattrs/docs/cattrs.rst:55
+msgid "cattrs.fns module"
+msgstr "cattrs.fns モジュール"
+
+#: cattrs.fns:1 of
+msgid "Useful internal functions."
+msgstr "役立つ内部関数。"
+
+#: ../../docstring of typing.Callable:1
+msgid "A predicate function determines if a type can be handled."
+msgstr "述語関数は、型を処理できるかどうかを判断します。"
+
+#: cattrs.fns.identity:1 of
+msgid "The identity function."
+msgstr "恒等関数。"
+
+#: cattrs.fns.raise_error:1 of
+msgid "At the bottom of the condition stack, we explode if we can't handle it."
+msgstr "条件スタックの一番下で、処理できない場合はエラーが発生します。"
+
+#: ../../downloads/cattrs/docs/cattrs.rst:63
+msgid "cattrs.v module"
+msgstr "cattrs.v モジュール"
+
+#: cattrs.v:1 of
+msgid "Cattrs validation."
+msgstr "Cattrs のバリデーション。"
+
+#: cattrs.v.format_exception:1 of
+msgid "The default exception formatter, handling the most common exceptions."
+msgstr "デフォルトの例外フォーマッター。最も一般的な例外を処理します。"
+
+#: cattrs.v.format_exception:3 of
+msgid "The following exceptions are handled specially:"
+msgstr "以下の例外は特別に処理されます:"
+
+#: cattrs.v.format_exception:5 of
+msgid "`KeyErrors` (`required field missing`)"
+msgstr "`KeyErrors` ( `required field missing` )"
+
+#: cattrs.v.format_exception:6 of
+msgid "`ValueErrors` (`invalid value for type, expected <type>` or just `invalid value`)"
+msgstr "`ValueErrors` ( `invalid value for type, expected <type>` または `invalid value` )"
+
+#: cattrs.v.format_exception:7 of
+msgid "`TypeErrors` (`invalid value for type, expected <type>` and a couple special cases for iterables)"
+msgstr "`TypeErrors` ( `invalid value for type, expected <type>` および、iterable のいくつかの特殊なケース )"
+
+#: cattrs.v.format_exception:9 of
+msgid "`cattrs.ForbiddenExtraKeysError`"
+msgstr "`cattrs.ForbiddenExtraKeysError`"
+
+#: cattrs.v.format_exception:10 of
+msgid "some `AttributeErrors` (special cased for structing mappings)"
+msgstr "いくつかの `AttributeErrors` (構造化マッピング用に特別に処理されます)"
+

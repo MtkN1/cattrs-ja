@@ -1,0 +1,372 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Tin Tvrtković
+# This file is distributed under the same license as the cattrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cattrs 24.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-24 22:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../downloads/cattrs/docs/customizing.md:1
+msgid "Customizing (Un-)structuring"
+msgstr "カスタム (非) 構造化"
+
+#: ../../downloads/cattrs/docs/customizing.md:3
+msgid "This section describes customizing the unstructuring and structuring processes in _cattrs_."
+msgstr "この セクションでは、 _cattrs_ における非構造化と構造化のプロセスをカスタマイズする方法について説明します。"
+
+#: ../../downloads/cattrs/docs/customizing.md:5
+msgid "Custom (Un-)structuring Hooks"
+msgstr "カスタム (非) 構造化フック"
+
+#: ../../downloads/cattrs/docs/customizing.md:7
+#, python-brace-format
+msgid "You can write your own structuring and unstructuring functions and register them for types using {meth}`Converter.register_structure_hook() <cattrs.BaseConverter.register_structure_hook>` and {meth}`Converter.register_unstructure_hook() <cattrs.BaseConverter.register_unstructure_hook>`. This approach is the most flexible but also requires the most amount of boilerplate."
+msgstr "独自の構造化関数と非構造化関数を作成し、{meth}`Converter.register_structure_hook() <cattrs.BaseConverter.register_structure_hook>` および {meth}`Converter.register_unstructure_hook() <cattrs.BaseConverter.register_unstructure_hook>` を使用して型に登録できます。このアプローチは最も柔軟性がありますが、最も多くのボイラープレートが必要です。"
+
+#: ../../downloads/cattrs/docs/customizing.md:10
+#, python-brace-format
+msgid "{meth}`register_structure_hook() <cattrs.BaseConverter.register_structure_hook>` and {meth}`register_unstructure_hook() <cattrs.BaseConverter.register_unstructure_hook>` use a Python [_singledispatch_](https://docs.python.org/3/library/functools.html#functools.singledispatch) under the hood. _singledispatch_ is powerful and fast but comes with some limitations; namely that it performs checks using `issubclass()` which doesn't work with many Python types. Some examples of this are:"
+msgstr "{meth}`register_structure_hook() <cattrs.BaseConverter.register_structure_hook>` と {meth}`register_unstructure_hook() <cattrs.BaseConverter.register_unstructure_hook>` は、内部で Python の [_singledispatch_](https://docs.python.org/3/library/functools.html#functools.singledispatch) を使用します。_singledispatch_ は強力で高速ですが、いくつかの制限があります。つまり、`issubclass()` を使用してチェックを実行しますが、これは多くの Python 型では機能しません。いくつかの例を挙げます:"
+
+#: ../../downloads/cattrs/docs/customizing.md:14
+msgid "various generic collections (`list[int]` is not a _subclass_ of `list`)"
+msgstr "さまざまなジェネリックコレクション ( `list[int]` は `list` の _サブクラス_ ではありません)"
+
+#: ../../downloads/cattrs/docs/customizing.md:15
+msgid "literals (`Literal[1]` is not a _subclass_ of `Literal[1]`)"
+msgstr "リテラル ( `Literal[1]` は `Literal[1]` の _サブクラス_ ではありません)"
+
+#: ../../downloads/cattrs/docs/customizing.md:16
+msgid "generics (`MyClass[int]` is not a _subclass_ of `MyClass`)"
+msgstr "ジェネリクス ( `MyClass[int]` は `MyClass` の _サブクラス_ ではありません)"
+
+#: ../../downloads/cattrs/docs/customizing.md:17
+msgid "protocols, unless they are `runtime_checkable`"
+msgstr "プロトコル ( `runtime_checkable` でない限り)"
+
+#: ../../downloads/cattrs/docs/customizing.md:18
+msgid "various modifiers, such as `Final` and `NotRequired`"
+msgstr "`Final` や `NotRequired` などのさまざまな修飾子"
+
+#: ../../downloads/cattrs/docs/customizing.md:19
+msgid "newtypes and 3.12 type aliases"
+msgstr "newtypes および 3.12 型エイリアス"
+
+#: ../../downloads/cattrs/docs/customizing.md:20
+msgid "`typing.Annotated`"
+msgstr "`typing.Annotated`"
+
+#: ../../downloads/cattrs/docs/customizing.md:22
+msgid "... and many others. In these cases, predicate functions should be used instead."
+msgstr "… その他多数。これらの場合、代わりに述語関数を使用する必要があります。"
+
+#: ../../downloads/cattrs/docs/customizing.md:24
+#: ../../downloads/cattrs/docs/customizing.md:123
+msgid "Use as Decorators"
+msgstr "デコレーターとして使用"
+
+#: ../../downloads/cattrs/docs/customizing.md:26
+#, python-brace-format
+msgid "{meth}`register_structure_hook() <cattrs.BaseConverter.register_structure_hook>` and {meth}`register_unstructure_hook() <cattrs.BaseConverter.register_unstructure_hook>` can also be used as _decorators_. When used this way they behave a little differently."
+msgstr "{meth}`register_structure_hook() <cattrs.BaseConverter.register_structure_hook>` と {meth}`register_unstructure_hook() <cattrs.BaseConverter.register_unstructure_hook>` は、_デコレーター_ としても使用できます。この方法で使用すると、動作が少し異なります。"
+
+#: ../../downloads/cattrs/docs/customizing.md:29
+#, python-brace-format
+msgid "{meth}`register_structure_hook() <cattrs.BaseConverter.register_structure_hook>` will inspect the return type of the hook and register the hook for that type."
+msgstr "{meth}`register_structure_hook() <cattrs.BaseConverter.register_structure_hook>` は、フックの戻り値の型を検査し、その型にフックを登録します。"
+
+#: ../../downloads/cattrs/docs/customizing.md:38
+#, python-brace-format
+msgid "{meth}`register_unstructure_hook() <cattrs.BaseConverter.register_unstructure_hook>` will inspect the type of the first argument and register the hook for that type."
+msgstr "{meth}`register_unstructure_hook() <cattrs.BaseConverter.register_unstructure_hook>` は、最初の引数の型を検査し、その型にフックを登録します。"
+
+#: ../../downloads/cattrs/docs/customizing.md:49
+msgid "The non-decorator approach is still recommended when dealing with lambdas, hooks produced elsewhere, unannotated hooks and situations where type introspection doesn't work."
+msgstr "ラムダ、他の場所で生成されたフック、アノテーションのないフック、および型イントロスペクションが機能しない状況を扱う場合は、非デコレーターアプローチが依然として推奨されます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:54
+msgid "Predicate Hooks"
+msgstr "述語フック"
+
+#: ../../downloads/cattrs/docs/customizing.md:56
+msgid "A _predicate_ is a function that takes a type and returns true or false depending on whether the associated hook can handle the given type."
+msgstr "_述語_ は、型を受け取り、関連付けられたフックが特定の型を処理できるかどうかに応じて、true または false を返す関数です。"
+
+#: ../../downloads/cattrs/docs/customizing.md:59
+#, python-brace-format
+msgid "The {meth}`register_unstructure_hook_func() <cattrs.BaseConverter.register_unstructure_hook_func>` and {meth}`register_structure_hook_func() <cattrs.BaseConverter.register_structure_hook_func>` are used to link un/structuring hooks to arbitrary types. These hooks are then called _predicate hooks_, and are very powerful."
+msgstr "{meth}`register_unstructure_hook_func() <cattrs.BaseConverter.register_unstructure_hook_func>` と {meth}`register_structure_hook_func() <cattrs.BaseConverter.register_structure_hook_func>` は、非/構造化フックを任意の型にリンクするために使用されます。これらのフックは _述語フック_ と呼ばれ、非常に強力です。"
+
+#: ../../downloads/cattrs/docs/customizing.md:62
+msgid "Predicate hooks are evaluated after the _singledispatch_ hooks. In the case where both a _singledispatch_ hook and a predicate hook are present, the _singledispatch_ hook will be used. Predicate hooks are checked in reverse order of registration, one-by-one, until a match is found."
+msgstr "述語フックは、_singledispatch_ フックの後に評価されます。_singledispatch_ フックと述語フックの両方が存在する場合、_singledispatch_ フックが使用されます。述語フックは、登録の逆順に 1 つずつチェックされ、一致するものが見つかるまで繰り返されます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:66
+msgid "The following example demonstrates a predicate that checks for the presence of an attribute on a class (`custom`), and then overrides the structuring logic."
+msgstr "次の例は、クラスに属性 ( `custom` ) が存在するかどうかを確認し、構造化ロジックをオーバーライドする述語を示しています。"
+
+#: ../../downloads/cattrs/docs/customizing.md:88
+msgid "Hook Factories"
+msgstr "フックファクトリー"
+
+#: ../../downloads/cattrs/docs/customizing.md:90
+msgid "Hook factories are higher-order predicate hooks: they are functions that *produce* hooks. Hook factories are commonly used to create very optimized hooks by offloading part of the work into a separate, earlier step."
+msgstr "フックファクトリーは、高階述語フックです。つまり、フックを *生成する* 関数です。フックファクトリーは、作業の一部を別のより早いステップにオフロードすることにより、非常に最適化されたフックを作成するためによく使用されます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:93
+#, python-brace-format
+msgid "Hook factories are registered using {meth}`Converter.register_unstructure_hook_factory() <cattrs.BaseConverter.register_unstructure_hook_factory>` and {meth}`Converter.register_structure_hook_factory() <cattrs.BaseConverter.register_structure_hook_factory>`."
+msgstr "フックファクトリーは、{meth}`Converter.register_unstructure_hook_factory() <cattrs.BaseConverter.register_unstructure_hook_factory>` および {meth}`Converter.register_structure_hook_factory() <cattrs.BaseConverter.register_structure_hook_factory>` を使用して登録されます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:95
+msgid "Here's an example showing how to use hook factories to apply the `forbid_extra_keys` to all attrs classes:"
+msgstr "フックファクトリーを使用して `forbid_extra_keys` をすべてのアトリビューツクラスに適用する方法を示す例を次に示します。"
+
+#: ../../downloads/cattrs/docs/customizing.md:119
+msgid "Hook factories can receive the current converter by exposing an additional required parameter."
+msgstr "フックファクトリーは、追加の必須パラメーターを公開することにより、現在のコンバーターを受け取ることができます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:121
+msgid "A complex use case for hook factories is described over at [](usage.md#using-factory-hooks)."
+msgstr "フックファクトリーの複雑なユースケースは、[](usage.md#using-factory-hooks) で説明されています。"
+
+#: ../../downloads/cattrs/docs/customizing.md:125
+#, python-brace-format
+msgid "{meth}`register_unstructure_hook_factory() <cattrs.BaseConverter.register_unstructure_hook_factory>` and {meth}`register_structure_hook_factory() <cattrs.BaseConverter.register_structure_hook_factory>` can also be used as decorators."
+msgstr "{meth}`register_unstructure_hook_factory() <cattrs.BaseConverter.register_unstructure_hook_factory>` および {meth}`register_structure_hook_factory() <cattrs.BaseConverter.register_structure_hook_factory>` は、デコレーターとしても使用できます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:128
+msgid "Here's an example of using an unstructure hook factory to handle unstructuring [queues](https://docs.python.org/3/library/queue.html#queue.Queue)."
+msgstr "非構造化フックファクトリーを使用して [キュー](https://docs.python.org/3/library/queue.html#queue.Queue) の非構造化を処理する例を次に示します。"
+
+#: ../../downloads/cattrs/docs/customizing.md:158
+msgid "Customizing Collections"
+msgstr "コレクションのカスタマイズ"
+
+#: ../../downloads/cattrs/docs/customizing.md:160
+#, python-brace-format
+msgid "The {mod}`cattrs.cols` module contains predicates and hook factories useful for customizing collection handling. These hook factories can be wrapped to apply complex customizations."
+msgstr "{mod}`cattrs.cols` モジュールには、コレクションの処理をカスタマイズするのに役立つ述語とフックファクトリーが含まれています。これらのフックファクトリーは、複雑なカスタマイズを適用するためにラップできます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:163
+msgid "Available predicates are:"
+msgstr "利用可能な述語は次のとおりです:"
+
+#: ../../downloads/cattrs/docs/customizing.md:165
+#, python-brace-format
+msgid "{meth}`is_any_set <cattrs.cols.is_any_set>`"
+msgstr "{meth}`is_any_set <cattrs.cols.is_any_set>`"
+
+#: ../../downloads/cattrs/docs/customizing.md:166
+#, python-brace-format
+msgid "{meth}`is_frozenset <cattrs.cols.is_frozenset>`"
+msgstr "{meth}`is_frozenset <cattrs.cols.is_frozenset>`"
+
+#: ../../downloads/cattrs/docs/customizing.md:167
+#, python-brace-format
+msgid "{meth}`is_set <cattrs.cols.is_set>`"
+msgstr "{meth}`is_set <cattrs.cols.is_set>`"
+
+#: ../../downloads/cattrs/docs/customizing.md:168
+#, python-brace-format
+msgid "{meth}`is_sequence <cattrs.cols.is_sequence>`"
+msgstr "{meth}`is_sequence <cattrs.cols.is_sequence>`"
+
+#: ../../downloads/cattrs/docs/customizing.md:169
+#, python-brace-format
+msgid "{meth}`is_mapping <cattrs.cols.is_mapping>`"
+msgstr "{meth}`is_mapping <cattrs.cols.is_mapping>`"
+
+#: ../../downloads/cattrs/docs/customizing.md:170
+#, python-brace-format
+msgid "{meth}`is_namedtuple <cattrs.cols.is_namedtuple>`"
+msgstr "{meth}`is_namedtuple <cattrs.cols.is_namedtuple>`"
+
+#: ../../downloads/cattrs/docs/customizing.md:173
+msgid "These predicates aren't _cattrs_-specific and may be useful in other contexts."
+msgstr "これらの述語は _cattrs_ 固有ではなく、他のコンテキストでも役立つ場合があります。"
+
+#: ../../downloads/cattrs/docs/customizing.md:183
+msgid "Available hook factories are:"
+msgstr "利用可能なフックファクトリーは次のとおりです:"
+
+#: ../../downloads/cattrs/docs/customizing.md:185
+#, python-brace-format
+msgid "{meth}`iterable_unstructure_factory <cattrs.cols.iterable_unstructure_factory>`"
+msgstr "{meth}`iterable_unstructure_factory <cattrs.cols.iterable_unstructure_factory>`"
+
+#: ../../downloads/cattrs/docs/customizing.md:186
+#, python-brace-format
+msgid "{meth}`list_structure_factory <cattrs.cols.list_structure_factory>`"
+msgstr "{meth}`list_structure_factory <cattrs.cols.list_structure_factory>`"
+
+#: ../../downloads/cattrs/docs/customizing.md:187
+#, python-brace-format
+msgid "{meth}`namedtuple_structure_factory <cattrs.cols.namedtuple_structure_factory>`"
+msgstr "{meth}`namedtuple_structure_factory <cattrs.cols.namedtuple_structure_factory>`"
+
+#: ../../downloads/cattrs/docs/customizing.md:188
+#, python-brace-format
+msgid "{meth}`namedtuple_unstructure_factory <cattrs.cols.namedtuple_unstructure_factory>`"
+msgstr "{meth}`namedtuple_unstructure_factory <cattrs.cols.namedtuple_unstructure_factory>`"
+
+#: ../../downloads/cattrs/docs/customizing.md:189
+#, python-brace-format
+msgid "{meth}`namedtuple_dict_structure_factory <cattrs.cols.namedtuple_dict_structure_factory>`"
+msgstr "{meth}`namedtuple_dict_structure_factory <cattrs.cols.namedtuple_dict_structure_factory>`"
+
+#: ../../downloads/cattrs/docs/customizing.md:190
+#, python-brace-format
+msgid "{meth}`namedtuple_dict_unstructure_factory <cattrs.cols.namedtuple_dict_unstructure_factory>`"
+msgstr "{meth}`namedtuple_dict_unstructure_factory <cattrs.cols.namedtuple_dict_unstructure_factory>`"
+
+#: ../../downloads/cattrs/docs/customizing.md:191
+#, python-brace-format
+msgid "{meth}`mapping_structure_factory <cattrs.cols.mapping_structure_factory>`"
+msgstr "{meth}`mapping_structure_factory <cattrs.cols.mapping_structure_factory>`"
+
+#: ../../downloads/cattrs/docs/customizing.md:193
+msgid "Additional predicates and hook factories will be added as requested."
+msgstr "追加の述語とフックファクトリーは、要求に応じて追加されます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:195
+msgid "For example, by default sequences are structured from any iterable into lists. This may be too lax, and additional validation may be applied by wrapping the default list structuring hook factory."
+msgstr "たとえば、デフォルトでは、シーケンスは任意のイテラブルからリストに構造化されます。これは緩すぎる可能性があり、デフォルトのリスト構造化フックファクトリーをラップすることで、追加の検証を適用できます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:219
+msgid "Now, all sequence structuring will be stricter:"
+msgstr "これで、すべてのシーケンス構造化がより厳密になります:"
+
+#: ../../downloads/cattrs/docs/customizing.md:232
+msgid "Customizing Named Tuples"
+msgstr "名前付きタプルのカスタマイズ"
+
+#: ../../downloads/cattrs/docs/customizing.md:234
+#, python-brace-format
+msgid "Named tuples can be un/structured using dictionaries using the {meth}`namedtuple_dict_structure_factory <cattrs.cols.namedtuple_dict_structure_factory>` and {meth}`namedtuple_dict_unstructure_factory <cattrs.cols.namedtuple_dict_unstructure_factory>` hook factories."
+msgstr "名前付きタプルは、{meth}`namedtuple_dict_structure_factory <cattrs.cols.namedtuple_dict_structure_factory>` および {meth}`namedtuple_dict_unstructure_factory <cattrs.cols.namedtuple_dict_unstructure_factory>` フックファクトリーを使用して、辞書を使用して非/構造化できます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:238
+msgid "To unstructure _all_ named tuples into dictionaries:"
+msgstr "_すべて_ の名前付きタプルを辞書に非構造化するには:"
+
+#: ../../downloads/cattrs/docs/customizing.md:256
+msgid "To only un/structure _some_ named tuples into dictionaries, change the predicate function when registering the hook factory:"
+msgstr "_一部の_ 名前付きタプルのみを辞書に非/構造化するには、フックファクトリーを登録するときに述語関数を変更します:"
+
+#: ../../downloads/cattrs/docs/customizing.md:269
+msgid "Using `cattrs.gen` Generators"
+msgstr "`cattrs.gen` ジェネレーターの使用"
+
+#: ../../downloads/cattrs/docs/customizing.md:271
+#, python-brace-format
+msgid "The {mod}`cattrs.gen` module allows for generating and compiling specialized hooks for unstructuring _attrs_ classes, dataclasses and typed dicts. The default {class}`Converter <cattrs.Converter>`, upon first encountering one of these types, will use the generation functions mentioned here to generate specialized hooks for it, register the hooks and use them."
+msgstr "{mod}`cattrs.gen` モジュールを使用すると、_attrs_ クラス、データクラス、および型付き辞書を非構造化するための特殊なフックを生成およびコンパイルできます。デフォルトの {class}`Converter <cattrs.Converter>` は、これらの型のいずれかを最初に検出すると、ここで説明する生成関数を使用して、それに対する特殊なフックを生成し、フックを登録して使用します。"
+
+#: ../../downloads/cattrs/docs/customizing.md:276
+msgid "One reason for generating these hooks in advance is that they can bypass a lot of _cattrs_ machinery and be significantly faster than normal _cattrs_. The hooks are also good building blocks for more complex customizations."
+msgstr "これらのフックを事前に生成する理由の 1 つは、_cattrs_ の多くの機構をバイパスし、通常の _cattrs_ よりも大幅に高速化できることです。フックは、より複雑なカスタマイズのための優れた構成要素でもあります。"
+
+#: ../../downloads/cattrs/docs/customizing.md:279
+msgid "Another reason is overriding behavior on a per-attribute basis."
+msgstr "もう 1 つの理由は、属性ごとに動作をオーバーライドすることです。"
+
+#: ../../downloads/cattrs/docs/customizing.md:281
+msgid "Currently, the overrides only support generating dictionary un/structuring hooks (as opposed to tuples), and support `omit_if_default`, `forbid_extra_keys`, `rename` and `omit`."
+msgstr "現在、オーバーライドは、(タプルとは対照的に) 辞書の非/構造化フックの生成のみをサポートし、`omit_if_default` 、 `forbid_extra_keys` 、 `rename` 、および `omit` をサポートします。"
+
+#: ../../downloads/cattrs/docs/customizing.md:283
+msgid "`omit_if_default`"
+msgstr "`omit_if_default`"
+
+#: ../../downloads/cattrs/docs/customizing.md:285
+msgid "This override can be applied on a per-class or per-attribute basis. The generated unstructuring hook will skip unstructuring values that are equal to their default or factory values."
+msgstr "このオーバーライドは、クラスごとまたは属性ごとに適用できます。生成された非構造化フックは、デフォルト値またはファクトリー値と等しい値の非構造化をスキップします。"
+
+#: ../../downloads/cattrs/docs/customizing.md:303
+msgid "Note that the per-attribute value overrides the per-class value. A side-effect of this is the ability to force the presence of a subset of fields. For example, consider a class with a `dateTime` field and a factory for it: skipping the unstructuring of the `dateTime` field would be inconsistent and based on the current time. So we apply the `omit_if_default` rule to the class, but not to the `dateTime` field."
+msgstr "属性ごとの値は、クラスごとの値をオーバーライドすることに注意してください。この副作用として、フィールドのサブセットの存在を強制することができます。たとえば、`dateTime` フィールドとそのファクトリーを持つクラスを考えてみましょう。`dateTime` フィールドの非構造化をスキップすると、一貫性がなくなり、現在の時刻に基づいてしまいます。したがって、`omit_if_default` ルールをクラスに適用しますが、`dateTime` フィールドには適用しません。"
+
+#: ../../downloads/cattrs/docs/customizing.md:329
+msgid "This override has no effect when generating structuring functions."
+msgstr "このオーバーライドは、構造化関数を生成するときには効果がありません。"
+
+#: ../../downloads/cattrs/docs/customizing.md:331
+msgid "`forbid_extra_keys`"
+msgstr "`forbid_extra_keys`"
+
+#: ../../downloads/cattrs/docs/customizing.md:333
+#, python-brace-format
+msgid "By default _cattrs_ is lenient in accepting unstructured input. If extra keys are present in a dictionary, they will be ignored when generating a structured object. Sometimes it may be desirable to enforce a stricter contract, and to raise an error when unknown keys are present - in particular when fields have default values this may help with catching typos. `forbid_extra_keys` can also be enabled (or disabled) on a per-class basis when creating structure hooks with {meth}`make_dict_structure_fn() <cattrs.gen.make_dict_structure_fn>`."
+msgstr "デフォルトでは、_cattrs_ は非構造化された入力を寛容に受け入れます。余分なキーが辞書に存在する場合、構造化されたオブジェクトを生成するときに無視されます。場合によっては、より厳密なコントラクトを適用し、不明なキーが存在する場合にエラーを発生させることが望ましい場合があります。特に、フィールドにデフォルト値がある場合、これはタイプミスをキャッチするのに役立ちます。`forbid_extra_keys` は、{meth}`make_dict_structure_fn() <cattrs.gen.make_dict_structure_fn>` で構造フックを作成するときに、クラスごとに有効 (または無効) にすることもできます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:358
+#, python-brace-format
+msgid "This behavior can only be applied to classes or to the default for the {class}`Converter <cattrs.Converter>`, and has no effect when generating unstructuring functions."
+msgstr "この動作は、クラスまたは {class}`Converter <cattrs.Converter>` のデフォルトにのみ適用でき、非構造化関数を生成するときには効果がありません。"
+
+#: ../../downloads/cattrs/docs/customizing.md:361
+msgid "The value for the `make_dict_structure_fn._cattrs_forbid_extra_keys` parameter is now taken from the given converter by default."
+msgstr "`make_dict_structure_fn._cattrs_forbid_extra_keys` パラメーターの値は、デフォルトで指定されたコンバーターから取得されるようになりました。"
+
+#: ../../downloads/cattrs/docs/customizing.md:365
+msgid "`rename`"
+msgstr "`rename`"
+
+#: ../../downloads/cattrs/docs/customizing.md:367
+msgid "Using the rename override makes `cattrs` use the provided name instead of the real attribute name. This is useful if an attribute name is a reserved keyword in Python."
+msgstr "rename オーバーライドを使用すると、`cattrs` は実際の属性名の代わりに指定された名前を使用します。これは、属性名が Python の予約キーワードである場合に役立ちます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:390
+msgid "`omit`"
+msgstr "`omit`"
+
+#: ../../downloads/cattrs/docs/customizing.md:392
+msgid "This override can only be applied to individual attributes. Using the `omit` override will simply skip the attribute completely when generating a structuring or unstructuring function."
+msgstr "このオーバーライドは、個々の属性にのみ適用できます。`omit` オーバーライドを使用すると、構造化関数または非構造化関数を生成するときに、属性が完全にスキップされます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:410
+msgid "`struct_hook` and `unstruct_hook`"
+msgstr "`struct_hook` および `unstruct_hook`"
+
+#: ../../downloads/cattrs/docs/customizing.md:412
+msgid "By default, the generators will determine the right un/structure hook for each attribute of a class at time of generation according to the type of each individual attribute."
+msgstr "デフォルトでは、ジェネレーターは、個々の属性の型に応じて、生成時にクラスの各属性に適切な非/構造フックを決定します。"
+
+#: ../../downloads/cattrs/docs/customizing.md:414
+msgid "This process can be overriden by passing in the desired un/structure hook manually."
+msgstr "このプロセスは、目的の非/構造フックを手動で渡すことによってオーバーライドできます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:434
+msgid "`use_alias`"
+msgstr "`use_alias`"
+
+#: ../../downloads/cattrs/docs/customizing.md:436
+msgid "By default, fields are un/structured to and from dictionary keys exactly matching the field names. _attrs_ classes support _attrs_ field aliases, which override the `__init__` parameter name for a given field. By generating your un/structure function with `_cattrs_use_alias=True`, _cattrs_ will use the field alias instead of the field name as the un/structured dictionary key."
+msgstr "デフォルトでは、フィールドはフィールド名と完全に一致する辞書キーとの間で非/構造化されます。_attrs_ クラスは _attrs_ フィールドエイリアスをサポートしており、特定のフィールドの `__init__` パラメーター名をオーバーライドします。`_cattrs_use_alias=True` で非/構造関数を生成することにより、_cattrs_ はフィールド名の代わりにフィールドエイリアスを非/構造化された辞書キーとして使用します。"
+
+#: ../../downloads/cattrs/docs/customizing.md:459
+msgid "`include_init_false`"
+msgstr "`include_init_false`"
+
+#: ../../downloads/cattrs/docs/customizing.md:461
+msgid "By default, _attrs_ fields defined as `init=False` are skipped when un/structuring. By generating your un/structure function with `_cattrs_include_init_false=True`, all `init=False` fields will be included for un/structuring."
+msgstr "デフォルトでは、`init=False` として定義された _attrs_ フィールドは、非/構造化時にスキップされます。`_cattrs_include_init_false=True` で非/構造関数を生成することにより、すべての `init=False` フィールドが非/構造化に含まれます。"
+
+#: ../../downloads/cattrs/docs/customizing.md:479
+msgid "A single attribute can be included by overriding it with `omit=False`."
+msgstr "単一の属性は、`omit=False` でオーバーライドすることで含めることができます。"
+

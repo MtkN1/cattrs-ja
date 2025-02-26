@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Tin Tvrtković
+# This file is distributed under the same license as the cattrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cattrs 24.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-24 22:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../downloads/cattrs/docs/benchmarking.md:1
+msgid "Benchmarking"
+msgstr ""
+
+#: ../../downloads/cattrs/docs/benchmarking.md:3
+msgid "cattrs includes a benchmarking suite to help detect performance regressions and guide performance optimizations."
+msgstr ""
+
+#: ../../downloads/cattrs/docs/benchmarking.md:6
+msgid "The suite is based on pytest and pytest-benchmark. Benchmarks are similar to tests, with the exception of being stored in the `bench/` directory and being used to verify performance instead of correctness."
+msgstr ""
+
+#: ../../downloads/cattrs/docs/benchmarking.md:10
+msgid "A Sample Workflow"
+msgstr ""
+
+#: ../../downloads/cattrs/docs/benchmarking.md:12
+msgid "First, ensure the system you're benchmarking on is as stable as possible. For example, the pyperf library has a `system tune` command that can tweak CPU frequency governors. You also might want to quit as many applications as possible and run the benchmark suite on isolated CPU cores (`taskset` can be used for this purpose on Linux)."
+msgstr ""
+
+#: ../../downloads/cattrs/docs/benchmarking.md:18
+msgid "Then, generate a baseline using `make bench`. This will run the benchmark suite and save it into a file."
+msgstr ""
+
+#: ../../downloads/cattrs/docs/benchmarking.md:21
+msgid "Following that, implement the changes you have in mind. Run the test suite to ensure correctness. Then, compare the performance of the new code to the saved baseline using `make bench-cmp`. If the code is still correct but faster, congratulations!"
+msgstr ""
+

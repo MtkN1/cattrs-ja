@@ -1,0 +1,211 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Tin Tvrtković
+# This file is distributed under the same license as the cattrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cattrs 24.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-24 22:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../downloads/cattrs/docs/indepth.md:1
+msgid "Converters In-Depth"
+msgstr "コンバーターの詳細"
+
+#: ../../downloads/cattrs/docs/indepth.md:5
+msgid "Converters are registries of rules _cattrs_ uses to perform function composition and generate its un/structuring functions."
+msgstr "コンバーターは、関数合成を実行し、非構造化/構造化関数を生成するために _cattrs_ が使用するルールのレジストリです。"
+
+#: ../../downloads/cattrs/docs/indepth.md:7
+msgid "Currently, a converter contains the following state:"
+msgstr "現在、コンバーターには次の状態が含まれています:"
+
+#: ../../downloads/cattrs/docs/indepth.md:9
+#, python-brace-format
+msgid "a registry of unstructure hooks, backed by a [singledispatch](https://docs.python.org/3/library/functools.html#functools.singledispatch) and a {class}`FunctionDispatch <cattrs.dispatch.FunctionDispatch>`, wrapped in a [cache](https://docs.python.org/3/library/functools.html#functools.cache)."
+msgstr "非構造化フックのレジストリ。 [singledispatch](https://docs.python.org/3/library/functools.html#functools.singledispatch) と、[キャッシュ](https://docs.python.org/3/library/functools.html#functools.cache)でラップされた{class}`FunctionDispatch <cattrs.dispatch.FunctionDispatch>`によってサポートされています。"
+
+#: ../../downloads/cattrs/docs/indepth.md:10
+msgid "a registry of structure hooks, backed by a different singledispatch and `FunctionDispatch`, and a different cache."
+msgstr "構造化フックのレジストリ。別の singledispatch と `FunctionDispatch`、および別のキャッシュによってサポートされています。"
+
+#: ../../downloads/cattrs/docs/indepth.md:11
+msgid "a `detailed_validation` flag (defaulting to true), determining whether the converter uses [detailed validation](validation.md#detailed-validation)."
+msgstr "`detailed_validation` フラグ (デフォルトは true)。コンバーターが[詳細な検証](validation.md#detailed-validation)を使用するかどうかを決定します。"
+
+#: ../../downloads/cattrs/docs/indepth.md:12
+#, python-brace-format
+msgid "a reference to {class}`an unstructuring strategy <cattrs.UnstructureStrategy>` (either AS_DICT or AS_TUPLE)."
+msgstr "{class}`非構造化戦略 <cattrs.UnstructureStrategy>` (AS_DICT または AS_TUPLE)への参照。"
+
+#: ../../downloads/cattrs/docs/indepth.md:13
+msgid "a `prefer_attrib_converters` flag (defaulting to false), determining whether to favor _attrs_ converters over normal _cattrs_ machinery when structuring _attrs_ classes"
+msgstr "`prefer_attrib_converters` フラグ (デフォルトは false)。_attrs_ クラスを構造化する際に、通常の _cattrs_ メカニズムよりも _attrs_ コンバーターを優先するかどうかを決定します。"
+
+#: ../../downloads/cattrs/docs/indepth.md:14
+msgid "a `dict_factory` callable, a legacy parameter used for creating `dicts` when dumping _attrs_ classes using `AS_DICT`."
+msgstr "`dict_factory` 呼び出し可能オブジェクト。`AS_DICT` を使用して _attrs_ クラスをダンプするときに `dicts` を作成するために使用されるレガシーパラメーター。"
+
+#: ../../downloads/cattrs/docs/indepth.md:16
+#, python-brace-format
+msgid "Converters may be cloned using the {meth}`Converter.copy() <cattrs.BaseConverter.copy>` method. The new copy may be changed through the `copy` arguments, but will retain all manually registered hooks from the original."
+msgstr "コンバーターは、{meth}`Converter.copy() <cattrs.BaseConverter.copy>` メソッドを使用して複製できます。新しいコピーは `copy` 引数を通じて変更できますが、元の手動で登録されたすべてのフックが保持されます。"
+
+#: ../../downloads/cattrs/docs/indepth.md:20
+msgid "Customizing Collection Unstructuring"
+msgstr "コレクションの非構造化のカスタマイズ"
+
+#: ../../downloads/cattrs/docs/indepth.md:23
+msgid "This feature is supported for Python 3.9 and later."
+msgstr "この機能は、Python 3.9 以降でサポートされています。"
+
+#: ../../downloads/cattrs/docs/indepth.md:27
+msgid "See [](customizing.md#customizing-collections) for a more modern and more powerful way of customizing collection handling."
+msgstr "コレクション処理をカスタマイズする、より現代的で強力な方法については、[](customizing.md#customizing-collections) を参照してください。"
+
+#: ../../downloads/cattrs/docs/indepth.md:30
+msgid "Overriding collection unstructuring in a generic way can be a very useful feature. A common example is using a JSON library that doesn't support sets, but expects lists and tuples instead."
+msgstr "一般的な方法でコレクションの非構造化をオーバーライドすることは、非常に便利な機能です。一般的な例としては、セットをサポートしていないが、代わりにリストとタプルを予期する JSON ライブラリを使用することがあります。"
+
+#: ../../downloads/cattrs/docs/indepth.md:33
+msgid "Using ordinary unstructuring hooks for this is unwieldy due to the semantics of [singledispatch](https://docs.python.org/3/library/functools.html#functools.singledispatch); in other words, you'd need to register hooks for all specific types of set you're using (`set[int]`, `set[float]`, `set[str]`...), which is not useful."
+msgstr "このために通常の非構造化フックを使用することは、[singledispatch](https://docs.python.org/3/library/functools.html#functools.singledispatch) のセマンティクスにより扱いにくいです。つまり、使用しているすべての特定のタイプのセット (`set[int]`、`set[float]`、`set[str]`...) に対してフックを登録する必要がありますが、これは役に立ちません。"
+
+#: ../../downloads/cattrs/docs/indepth.md:38
+msgid "Function-based hooks can be used instead, but come with their own set of challenges - they're complicated to write efficiently."
+msgstr "関数ベースのフックを代わりに使用できますが、独自の課題があります。効率的に記述するのが複雑です。"
+
+#: ../../downloads/cattrs/docs/indepth.md:40
+#, python-brace-format
+msgid "The {class}`Converter` supports easy customizations of collection unstructuring using its `unstruct_collection_overrides` parameter. For example, to unstructure all sets into lists, use the following:"
+msgstr "{class}`Converter` は、`unstruct_collection_overrides` パラメーターを使用して、コレクションの非構造化の簡単なカスタマイズをサポートしています。たとえば、すべてのセットをリストに非構造化するには、次のようにします:"
+
+#: ../../downloads/cattrs/docs/indepth.md:52
+msgid "Going even further, the `Converter` contains heuristics to support the following Python types, in order of decreasing generality:"
+msgstr "さらに、`Converter` には、一般性の高い順に、次の Python 型をサポートするヒューリスティクスが含まれています:"
+
+#: ../../downloads/cattrs/docs/indepth.md:54
+msgid "`typing.Sequence`, `typing.MutableSequence`, `list`, `deque`, `tuple`"
+msgstr "`typing.Sequence`、`typing.MutableSequence`、`list`、`deque`、`tuple`"
+
+#: ../../downloads/cattrs/docs/indepth.md:55
+msgid "`typing.Set`, `frozenset`, `typing.MutableSet`, `set`"
+msgstr "`typing.Set`、`frozenset`、`typing.MutableSet`、`set`"
+
+#: ../../downloads/cattrs/docs/indepth.md:56
+msgid "`typing.Mapping`, `typing.MutableMapping`, `dict`, `defaultdict`, `collections.OrderedDict`, `collections.Counter`"
+msgstr "`typing.Mapping`、`typing.MutableMapping`、`dict`、`defaultdict`、`collections.OrderedDict`、`collections.Counter`"
+
+#: ../../downloads/cattrs/docs/indepth.md:58
+msgid "For example, if you override the unstructure type for `Sequence`, but not for `MutableSequence`, `list` or `tuple`, the override will also affect those types. An easy way to remember the rule:"
+msgstr "たとえば、`Sequence` の非構造化タイプをオーバーライドしても、`MutableSequence`、`list`、または `tuple` の非構造化タイプをオーバーライドしない場合、オーバーライドはこれらのタイプにも影響します。ルールを覚える簡単な方法は次のとおりです:"
+
+#: ../../downloads/cattrs/docs/indepth.md:61
+msgid "all `MutableSequence` s are `Sequence` s, so the override will apply"
+msgstr "すべての `MutableSequence` は `Sequence` であるため、オーバーライドが適用されます"
+
+#: ../../downloads/cattrs/docs/indepth.md:62
+msgid "all `list` s are `MutableSequence` s, so the override will apply"
+msgstr "すべての `list` は `MutableSequence` であるため、オーバーライドが適用されます"
+
+#: ../../downloads/cattrs/docs/indepth.md:63
+msgid "all `tuple` s are `Sequence` s, so the override will apply"
+msgstr "すべての `tuple` は `Sequence` であるため、オーバーライドが適用されます"
+
+#: ../../downloads/cattrs/docs/indepth.md:65
+msgid "If, however, you override only `MutableSequence`, fields annotated as `Sequence` will not be affected (since not all sequences are mutable sequences), and fields annotated as tuples will not be affected (since tuples are not mutable sequences in the first place)."
+msgstr "ただし、`MutableSequence` のみをオーバーライドする場合、`Sequence` として注釈が付けられたフィールドは影響を受けません (すべてのシーケンスが可変シーケンスであるとは限らないため)。また、タプルとして注釈が付けられたフィールドも影響を受けません (タプルはそもそも可変シーケンスではないため)。"
+
+#: ../../downloads/cattrs/docs/indepth.md:68
+msgid "Similar logic applies to the set and mapping hierarchies."
+msgstr "同様のロジックが、セットとマッピングの階層に適用されます。"
+
+#: ../../downloads/cattrs/docs/indepth.md:70
+msgid "Make sure you're using the types from `collections.abc` on Python 3.9+, and from `typing` on older Python versions."
+msgstr "Python 3.9 以降では `collections.abc` の型を使用し、古い Python バージョンでは `typing` の型を使用していることを確認してください。"
+
+#: ../../downloads/cattrs/docs/indepth.md:73
+msgid "Fallback Hook Factories"
+msgstr "フォールバックフックファクトリ"
+
+#: ../../downloads/cattrs/docs/indepth.md:75
+#, python-brace-format
+msgid "By default, when a {class}`converter <cattrs.BaseConverter>` cannot handle a type it will:"
+msgstr "デフォルトでは、{class}`コンバーター <cattrs.BaseConverter>` が型を処理できない場合、次のようになります:"
+
+#: ../../downloads/cattrs/docs/indepth.md:77
+msgid "when unstructuring, pass the value through unchanged"
+msgstr "非構造化するときは、値を変更せずに渡します"
+
+#: ../../downloads/cattrs/docs/indepth.md:78
+#, python-brace-format
+msgid "when structuring, raise a {class}`cattrs.errors.StructureHandlerNotFoundError` asking the user to add configuration"
+msgstr "構造化するときは、ユーザーに構成の追加を求める {class}`cattrs.errors.StructureHandlerNotFoundError` を発生させます"
+
+#: ../../downloads/cattrs/docs/indepth.md:80
+msgid "These behaviors can be customized by providing custom [hook factories](usage.md#using-factory-hooks) when creating the converter."
+msgstr "これらの動作は、コンバーターの作成時にカスタム[フックファクトリ](usage.md#using-factory-hooks)を提供することでカスタマイズできます。"
+
+#: ../../downloads/cattrs/docs/indepth.md:94
+msgid "This also enables converters to be chained."
+msgstr "これにより、コンバーターをチェーン化することもできます。"
+
+#: ../../downloads/cattrs/docs/indepth.md:109
+msgid "`cattrs.Converter`"
+msgstr "`cattrs.Converter`"
+
+#: ../../downloads/cattrs/docs/indepth.md:111
+#, python-brace-format
+msgid "The {class}`Converter` is a converter variant that automatically generates, compiles and caches specialized structuring and unstructuring hooks for _attrs_ classes, dataclasses and TypedDicts."
+msgstr "{class}`Converter` は、_attrs_ クラス、dataclass、および TypedDict のための特殊な構造化フックと非構造化フックを自動的に生成、コンパイル、およびキャッシュするコンバーターバリアントです。"
+
+#: ../../downloads/cattrs/docs/indepth.md:113
+#, python-brace-format
+msgid "`Converter` differs from the {class}`cattrs.BaseConverter` in the following ways:"
+msgstr "`Converter` は、次の点で {class}`cattrs.BaseConverter` と異なります:"
+
+#: ../../downloads/cattrs/docs/indepth.md:115
+msgid "structuring and unstructuring of _attrs_ classes is slower the first time, but faster every subsequent time"
+msgstr "_attrs_ クラスの構造化と非構造化は、最初は遅くなりますが、それ以降は毎回速くなります"
+
+#: ../../downloads/cattrs/docs/indepth.md:116
+msgid "structuring and unstructuring can be customized"
+msgstr "構造化と非構造化はカスタマイズできます"
+
+#: ../../downloads/cattrs/docs/indepth.md:117
+msgid "support for _attrs_ classes with PEP563 (postponed) annotations"
+msgstr "PEP563 (延期) アノテーションを持つ _attrs_ クラスのサポート"
+
+#: ../../downloads/cattrs/docs/indepth.md:118
+msgid "support for generic _attrs_ classes"
+msgstr "ジェネリック _attrs_ クラスのサポート"
+
+#: ../../downloads/cattrs/docs/indepth.md:119
+msgid "support for easy overriding collection unstructuring"
+msgstr "コレクションの非構造化を簡単にオーバーライドするためのサポート"
+
+#: ../../downloads/cattrs/docs/indepth.md:121
+#, python-brace-format
+msgid "The {class}`Converter` used to be called `GenConverter`, and that alias is still present for backwards compatibility."
+msgstr "{class}`Converter` は以前は `GenConverter` と呼ばれていましたが、下位互換性のためにそのエイリアスはまだ存在します。"
+
+#: ../../downloads/cattrs/docs/indepth.md:123
+msgid "`cattrs.BaseConverter`"
+msgstr "`cattrs.BaseConverter`"
+
+#: ../../downloads/cattrs/docs/indepth.md:125
+#, python-brace-format
+msgid "The {class}`BaseConverter` is a simpler and slower converter variant. It does no code generation, so it may be faster on first-use which can be useful in specific cases, like CLI applications where startup time is more important than throughput."
+msgstr "{class}`BaseConverter` は、よりシンプルで低速なコンバーターバリアントです。コード生成を行わないため、最初の使用時に高速になる可能性があり、これは、起動時間がスループットよりも重要な CLI アプリケーションなどの特定のケースで役立ちます。"
+

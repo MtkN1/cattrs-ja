@@ -1,0 +1,486 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Tin Tvrtković
+# This file is distributed under the same license as the cattrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cattrs 24.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-24 22:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:1
+msgid "Built-in Hooks"
+msgstr "組み込みフック"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:6
+msgid "_cattrs_ converters come with with a large repertoire of un/structuring hooks built-in. As always, complex hooks compose with simpler ones."
+msgstr "_cattrs_ コンバーターには、 多数の構造化/非構造化フックが組み込まれています。 常にそうであるように、 複雑なフックはより単純なものと組み合わされます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:9
+msgid "Primitive Values"
+msgstr "プリミティブ値"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:11
+msgid "`int`, `float`, `str`, `bytes`"
+msgstr "`int` 、 `float` 、 `str` 、 `bytes`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:13
+msgid "When structuring, use any of these types to coerce the object to that type."
+msgstr "構造化する際、 これらの型のいずれかを使用して、 オブジェクトをその型に強制します。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:23
+msgid "In case the conversion isn't possible the expected exceptions will be propagated out. The particular exceptions are the same as if you'd tried to do the coercion directly."
+msgstr "変換が不可能な場合、 予期される例外が伝播されます。 特定の例外は、 直接強制変換しようとした場合と同じです。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:33
+msgid "Coercion is performed for performance and compatibility reasons. Any of these hooks can be overriden if pure validation is required instead."
+msgstr "強制は、 パフォーマンスと互換性の理由から実行されます。 代わりに純粋な検証が必要な場合は、 これらのフックのいずれかをオーバーライドできます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:50
+msgid "When unstructuring, these types are passed through unchanged."
+msgstr "非構造化する場合、 これらの型は変更されずに渡されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:52
+msgid "Enums"
+msgstr "列挙型"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:54
+msgid "Enums are structured by their values, and unstructured to their values. This works even for complex values, like tuples."
+msgstr "列挙型は、 それらの値によって構造化され、 それらの値に非構造化されます。 これは、 タプルのような複雑な値でも機能します。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:72
+msgid "Again, in case of errors, the expected exceptions are raised."
+msgstr "繰り返しになりますが、 エラーが発生した場合、 予期される例外が発生します。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:74
+msgid "`pathlib.Path`"
+msgstr "`pathlib.Path`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:76
+msgid "[`pathlib.Path`](https://docs.python.org/3/library/pathlib.html#pathlib.Path) objects are structured using their string value, and unstructured into their string value."
+msgstr "[`pathlib.Path`](https://docs.python.org/3/library/pathlib.html#pathlib.Path) オブジェクトは、 それらの文字列値を使用して構造化され、 それらの文字列値に非構造化されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:89
+msgid "In case the conversion isn't possible, the resulting exception is propagated out."
+msgstr "変換が不可能な場合、 結果の例外が伝播されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:96
+msgid "Collections and Related Generics"
+msgstr "コレクションと関連するジェネリクス"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:99
+msgid "Optionals"
+msgstr "オプション"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:101
+msgid "`Optional` primitives and collections are supported out of the box. [PEP 604](https://peps.python.org/pep-0604/) optionals (`T | None`) are also supported on Python 3.10 and later."
+msgstr "`Optional` プリミティブとコレクションは、 デフォルトでサポートされています。 [PEP 604](https://peps.python.org/pep-0604/) オプション ( `T | None` ) は、 Python 3.10 以降でもサポートされています。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:115
+msgid "Bare `Optional` s (non-parameterized, just `Optional`, as opposed to `Optional[str]`) aren't supported; `Optional[Any]` should be used instead."
+msgstr "ベア `Optional` (パラメーター化されていない、 単なる `Optional` 、 `Optional[str]` とは対照的) はサポートされていません。 代わりに `Optional[Any]` を使用する必要があります。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:117
+#, python-brace-format
+msgid "`Optionals` handling can be customized using {meth}`register_structure_hook` and {meth}`register_unstructure_hook`."
+msgstr "`Optionals` の処理は、 {meth}`register_structure_hook` および {meth}`register_unstructure_hook` を使用してカスタマイズできます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:134
+msgid "Lists"
+msgstr "リスト"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:136
+msgid "Lists can be structured from any iterable object. Types converting to lists are:"
+msgstr "リストは、 任意の反復可能オブジェクトから構造化できます。 リストに変換する型は次のとおりです:"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:139
+msgid "`typing.Sequence[T]`"
+msgstr "`typing.Sequence[T]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:140
+msgid "`typing.MutableSequence[T]`"
+msgstr "`typing.MutableSequence[T]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:141
+msgid "`typing.List[T]`"
+msgstr "`typing.List[T]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:142
+msgid "`list[T]`"
+msgstr "`list[T]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:144
+msgid "In all cases, a new list will be returned, so this operation can be used to copy an iterable into a list. A bare type, for example `Sequence` instead of `Sequence[int]`, is equivalent to `Sequence[Any]`."
+msgstr "すべての場合において、 新しいリストが返されるため、 この操作を使用して、 反復可能オブジェクトをリストにコピーできます。 ベア型 (たとえば、 `Sequence[int]` の代わりに `Sequence` ) は、 `Sequence[Any]` と同等です。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:153
+msgid "When unstructuring, lists are copied and their contents are handled according to their inner type. A useful use case for unstructuring collections is to create a deep copy of a complex or recursive collection."
+msgstr "非構造化する場合、 リストはコピーされ、 その内容は内部型に従って処理されます。 コレクションを非構造化する有用なユースケースは、 複雑なコレクションまたは再帰的なコレクションのディープコピーを作成することです。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:156
+msgid "Dictionaries"
+msgstr "辞書"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:158
+msgid "Dictionaries can be produced from other mapping objects. More precisely, the unstructured object must expose an [`items()`](https://docs.python.org/3/library/stdtypes.html#dict.items) method producing an iterable of key-value tuples, and be able to be passed to the `dict` constructor as an argument. Types converting to dictionaries are:"
+msgstr "辞書は、 他のマッピングオブジェクトから生成できます。 より正確には、 非構造化オブジェクトは、 キーと値のタプルの反復可能オブジェクトを生成する [`items()`](https://docs.python.org/3/library/stdtypes.html#dict.items) メソッドを公開し、 引数として `dict` コンストラクターに渡すことができる必要があります。 辞書に変換する型は次のとおりです:"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:163
+msgid "`dict[K, V]` and `typing.Dict[K, V]`"
+msgstr "`dict[K, V]` および `typing.Dict[K, V]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:164
+msgid "`collections.abc.MutableMapping[K, V]` and `typing.MutableMapping[K, V]`"
+msgstr "`collections.abc.MutableMapping[K, V]` および `typing.MutableMapping[K, V]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:165
+msgid "`collections.abc.Mapping[K, V]` and `typing.Mapping[K, V]`"
+msgstr "`collections.abc.Mapping[K, V]` および `typing.Mapping[K, V]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:167
+msgid "In all cases, a new dict will be returned, so this operation can be used to copy a mapping into a dict. Any type parameters set to `typing.Any` will be passed through unconverted. If both type parameters are absent, they will be treated as `Any` too."
+msgstr "すべての場合において、 新しい辞書が返されるため、 この操作を使用して、 マッピングを辞書にコピーできます。 `typing.Any` に設定された型パラメーターは、 変換されずに渡されます。 両方の型パラメーターがない場合、 それらは `Any` としても扱われます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:178
+msgid "Both keys and values are converted."
+msgstr "キーと値の両方が変換されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:186
+msgid "Virtual Subclasses of [`abc.Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping) and [`abc.MutableMapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.MutableMapping)"
+msgstr "[`abc.Mapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.Mapping) および [`abc.MutableMapping`](https://docs.python.org/3/library/collections.abc.html#collections.abc.MutableMapping) の仮想サブクラス"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:188
+msgid "If a class declares itself a virtual subclass of `collections.abc.Mapping` or `collections.abc.MutableMapping` and its initializer accepts a dictionary, _cattrs_ will be able to structure it by default."
+msgstr "クラスが `collections.abc.Mapping` または `collections.abc.MutableMapping` の仮想サブクラスであると宣言し、 その初期化子が辞書を受け入れる場合、 _cattrs_ はデフォルトでそれを構造化できます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:191
+msgid "Homogeneous and Heterogeneous Tuples"
+msgstr "同種および異種タプル"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:193
+msgid "Homogeneous and heterogeneous tuples can be structured from iterable objects. Heterogeneous tuples require an iterable with the number of elements matching the number of type parameters exactly."
+msgstr "同種および異種のタプルは、 反復可能オブジェクトから構造化できます。 異種タプルは、 型パラメーターの数と完全に一致する要素数を持つ反復可能オブジェクトを必要とします。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:196
+msgid "Use:"
+msgstr "使用:"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:198
+msgid "`Tuple[A, B, C, D]`"
+msgstr "`Tuple[A, B, C, D]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:199
+msgid "`tuple[A, B, C, D]`"
+msgstr "`tuple[A, B, C, D]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:201
+msgid "Homogeneous tuples use:"
+msgstr "同種タプルは以下を使用します:"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:203
+msgid "`Tuple[T, ...]`"
+msgstr "`Tuple[T, ...]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:204
+msgid "`tuple[T, ...]`"
+msgstr "`tuple[T, ...]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:206
+msgid "In all cases a tuple will be produced. Any type parameters set to `typing.Any` will be passed through unconverted."
+msgstr "すべての場合において、 タプルが生成されます。 `typing.Any` に設定された型パラメーターは、 変換されずに渡されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:215
+msgid "When unstructuring, heterogeneous tuples unstructure into tuples since it's faster and virtually all serialization libraries support tuples natively."
+msgstr "非構造化する場合、 異種タプルはタプルに非構造化されます。 これは、 より高速であり、 ほとんどすべてのシリアル化ライブラリがネイティブでタプルをサポートしているためです。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:218
+msgid "[Support for typing.NamedTuple.](#typingnamedtuple)"
+msgstr "[typing.NamedTuple のサポート。](#typingnamedtuple)"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:222
+msgid "Structuring heterogenous tuples are not supported by the BaseConverter."
+msgstr "異種タプルの構造化は、 BaseConverter ではサポートされていません。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:225
+msgid "Deques"
+msgstr "デキュー"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:227
+msgid "Deques can be structured from any iterable object. Types converting to deques are:"
+msgstr "デキューは、 任意の反復可能オブジェクトから構造化できます。 デキューに変換する型は次のとおりです:"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:230
+msgid "`typing.Deque[T]`"
+msgstr "`typing.Deque[T]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:231
+msgid "`collections.deque[T]`"
+msgstr "`collections.deque[T]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:233
+msgid "In all cases, a new **unbounded** deque (`maxlen=None`) will be produced, so this operation can be used to copy an iterable into a deque. If you want to convert into bounded `deque`, registering a custom structuring hook is a good approach."
+msgstr "すべての場合において、 新しい **非有界** デキュー ( `maxlen=None` ) が生成されるため、 この操作を使用して、 反復可能オブジェクトをデキューにコピーできます。 有界 `deque` に変換する場合は、 カスタム構造化フックを登録するのが良い方法です。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:243
+#, python-brace-format
+msgid "Deques are unstructured into lists, or into deques when using the {class}`BaseConverter`."
+msgstr "デキューは、 リストに非構造化されるか、 {class}`BaseConverter` を使用する場合はデキューに非構造化されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:250
+msgid "Sets and Frozensets"
+msgstr "セットとフローズンセット"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:252
+msgid "Sets and frozensets can be structured from any iterable object. Types converting to sets are:"
+msgstr "セットとフローズンセットは、 任意の反復可能オブジェクトから構造化できます。 セットに変換する型は次のとおりです:"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:255
+msgid "`typing.Set[T]`"
+msgstr "`typing.Set[T]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:256
+msgid "`typing.MutableSet[T]`"
+msgstr "`typing.MutableSet[T]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:257
+msgid "`set[T]`"
+msgstr "`set[T]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:259
+msgid "Types converting to frozensets are:"
+msgstr "フローズンセットに変換する型は次のとおりです:"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:261
+msgid "`typing.FrozenSet[T]`"
+msgstr "`typing.FrozenSet[T]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:262
+msgid "`frozenset[T]`"
+msgstr "`frozenset[T]`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:264
+msgid "In all cases, a new set or frozenset will be returned. A bare type, for example `MutableSet` instead of `MutableSet[int]`, is equivalent to `MutableSet[Any]`."
+msgstr "すべての場合において、 新しいセットまたはフローズンセットが返されます。 ベア型 (たとえば、 `MutableSet[int]` の代わりに `MutableSet` ) は、 `MutableSet[Any]` と同等です。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:273
+msgid "Sets and frozensets are unstructured into the same class."
+msgstr "セットとフローズンセットは、 同じクラスに非構造化されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:276
+msgid "Typed Dicts"
+msgstr "型付き辞書"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:278
+msgid "[TypedDicts](https://peps.python.org/pep-0589/) can be structured from mapping objects, usually dictionaries."
+msgstr "[TypedDicts](https://peps.python.org/pep-0589/) は、 マッピングオブジェクト (通常は辞書) から構造化できます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:290
+msgid "Both [_total_ and _non-total_](https://peps.python.org/pep-0589/#totality) TypedDicts are supported, and inheritance between any combination works (except on 3.8 when `typing.TypedDict` is used, see below). Generic TypedDicts work on Python 3.11 and later, since that is the first Python version that supports them in general."
+msgstr "[_total_ および _non-total_](https://peps.python.org/pep-0589/#totality) の TypedDicts の両方がサポートされており、 任意の組み合わせ間の継承が機能します (ただし、 `typing.TypedDict` が使用されている 3.8 を除く、 下記参照)。 ジェネリック TypedDicts は、 Python 3.11 以降で動作します。 これは、 それらを一般的にサポートする最初の Python バージョンであるためです。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:293
+msgid "[`typing.Required` and `typing.NotRequired`](https://peps.python.org/pep-0655/) are supported."
+msgstr "[`typing.Required` および `typing.NotRequired`](https://peps.python.org/pep-0655/) がサポートされています。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:295
+msgid "On Python 3.8, using `typing_extensions.TypedDict` is recommended since `typing.TypedDict` doesn't support all necessary features so certain combinations of subclassing, totality and `typing.Required` won't work."
+msgstr "Python 3.8 では、 `typing_extensions.TypedDict` を使用することをお勧めします。 `typing.TypedDict` は必要な機能をすべてサポートしているわけではないため、 サブクラス化、 totality 、 `typing.Required` の特定の組み合わせは機能しません。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:297
+#, python-brace-format
+msgid "[Similar to _attrs_ classes](customizing.md#using-cattrsgen-generators), un/structuring can be customized using {meth}`cattrs.gen.typeddicts.make_dict_structure_fn` and {meth}`cattrs.gen.typeddicts.make_dict_unstructure_fn`."
+msgstr "[_attrs_ クラスと同様に](customizing.md#using-cattrsgen-generators) 、 構造化/非構造化は、 {meth}`cattrs.gen.typeddicts.make_dict_structure_fn` および {meth}`cattrs.gen.typeddicts.make_dict_unstructure_fn` を使用してカスタマイズできます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:323
+msgid "TypedDicts unstructure into dictionaries, potentially unchanged (depending on the exact field types and registered hooks)."
+msgstr "TypedDicts は辞書に非構造化され、 (正確なフィールド型と登録されたフックに応じて) 変更されない可能性があります。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:345
+msgid "_attrs_ Classes and Dataclasses"
+msgstr "_attrs_ クラスとデータクラス"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:347
+msgid "_attrs_ classes and dataclasses work out of the box. The fields require type annotations (even if static type-checking is not being used), or they will be treated as [](#typingany)."
+msgstr "_attrs_ クラスとデータクラスは、 デフォルトで動作します。 フィールドには型注釈が必要です (静的型チェックが使用されていない場合でも)。 そうでない場合、 それらは [](#typingany) として扱われます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:350
+msgid "When structuring, given a mapping `d` and class `A`, _cattrs_ will instantiate `A` with `d` unpacked."
+msgstr "構造化する場合、 マッピング `d` とクラス `A` が与えられた場合、 _cattrs_ は `d` をアンパックして `A` をインスタンス化します。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:363
+#, python-brace-format
+msgid "Tuples can be structured into classes using {meth}`structure_attrs_fromtuple() <cattrs.structure_attrs_fromtuple>` (`fromtuple` as in the opposite of [`attrs.astuple`](https://www.attrs.org/en/stable/api.html#attrs.astuple) and {meth}`BaseConverter.unstructure_attrs_astuple`)."
+msgstr "タプルは、 {meth}`structure_attrs_fromtuple() <cattrs.structure_attrs_fromtuple>` ( [`attrs.astuple`](https://www.attrs.org/en/stable/api.html#attrs.astuple) および {meth}`BaseConverter.unstructure_attrs_astuple` の反対の意味での `fromtuple` ) を使用してクラスに構造化できます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:376
+#, python-brace-format
+msgid "Loading from tuples can be made the default by creating a new {class}`Converter <cattrs.Converter>` with `unstruct_strat=cattr.UnstructureStrategy.AS_TUPLE`."
+msgstr "タプルからのロードは、 `unstruct_strat=cattr.UnstructureStrategy.AS_TUPLE` を持つ新しい {class}`Converter <cattrs.Converter>` を作成することでデフォルトにできます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:390
+msgid "Structuring from tuples can also be made the default for specific classes only by registering a hook the usual way."
+msgstr "タプルからの構造化は、 通常の方法でフックを登録することによってのみ、 特定のクラスのデフォルトにすることもできます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:405
+msgid "Generics"
+msgstr "ジェネリクス"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:407
+msgid "Generic _attrs_ classes and dataclasses are fully supported, both using `typing.Generic` and [PEP 695](https://peps.python.org/pep-0695/)."
+msgstr "ジェネリック _attrs_ クラスとデータクラスは、 `typing.Generic` と [PEP 695](https://peps.python.org/pep-0695/) の両方を使用して完全にサポートされています。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:419
+msgid "Using Attribute Types and Converters"
+msgstr "属性の型とコンバーターの使用"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:421
+#, python-brace-format
+msgid "By default, {meth}`structure() <cattrs.BaseConverter.structure>` will use hooks registered using {meth}`register_structure_hook() <cattrs.BaseConverter.register_structure_hook>` to convert values to the attribute type, and proceed to invoking any converters registered on attributes with `field`."
+msgstr "デフォルトでは、 {meth}`structure() <cattrs.BaseConverter.structure>` は、 {meth}`register_structure_hook() <cattrs.BaseConverter.register_structure_hook>` を使用して登録されたフックを使用して、 値を属性の型に変換し、 `field` を持つ属性に登録されたコンバーターの呼び出しに進みます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:438
+#, python-brace-format
+msgid "Priority is still given to hooks registered with {meth}`register_structure_hook() <cattrs.BaseConverter.register_structure_hook>`, but this priority can be inverted by setting `prefer_attrib_converters` to `True`."
+msgstr "優先度は、 {meth}`register_structure_hook() <cattrs.BaseConverter.register_structure_hook>` で登録されたフックに引き続き与えられますが、 `prefer_attrib_converters` を `True` に設定することで、 この優先度を反転させることができます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:454
+msgid "If an _attrs_ or dataclass class uses inheritance and as such has one or several subclasses, it can be structured automatically to its exact subtype by using the [include subclasses](strategies.md#include-subclasses-strategy) strategy."
+msgstr "_attrs_ クラスまたはデータクラスが継承を使用し、 そのため 1 つまたは複数のサブクラスを持つ場合、 [サブクラスを含める](strategies.md#include-subclasses-strategy) 戦略を使用することで、 正確なサブタイプに自動的に構造化できます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:458
+msgid "Unions"
+msgstr "ユニオン"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:460
+msgid "Unions of `NoneType` and a single other type (also known as optionals) are supported by a [special case](#optionals)."
+msgstr "`NoneType` と単一の他の型 (オプションとしても知られている) のユニオンは、 [特別なケース](#optionals) によってサポートされています。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:463
+msgid "Automatic Disambiguation"
+msgstr "自動曖昧性解消"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:465
+msgid "_cattrs_ includes an opinionated strategy for automatically handling unions of _attrs_ classes; see [](unions.md#default-union-strategy) for details."
+msgstr "_cattrs_ には、 _attrs_ クラスのユニオンを自動的に処理するための意見のある戦略が含まれています。 詳細については、 [](unions.md#default-union-strategy) を参照してください。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:467
+msgid "When unstructuring these kinds of unions, each union member will be unstructured according to the hook for that type."
+msgstr "これらの種類のユニオンを非構造化する場合、 各ユニオンメンバーは、 その型のフックに従って非構造化されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:470
+msgid "Unions of Simple Types"
+msgstr "単純型のユニオン"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:472
+msgid "_cattrs_ comes with the [](strategies.md#union-passthrough), which enables converters to structure unions of many primitive types and literals. This strategy can be applied to any converter, and is pre-applied to all [preconf](preconf.md) converters according to their underlying protocols."
+msgstr "_cattrs_ には [](strategies.md#union-passthrough) が付属しており、 コンバーターは多くのプリミティブ型とリテラルのユニオンを構造化できます。 この戦略は任意のコンバーターに適用でき、 基になるプロトコルに従って、 すべての [preconf](preconf.md) コンバーターに事前に適用されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:476
+msgid "Special Typing Forms"
+msgstr "特別な型付け形式"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:479
+msgid "`typing.Any`"
+msgstr "`typing.Any`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:481
+msgid "When structuring, use `typing.Any` to avoid applying any conversions to the object you're structuring; it will simply be passed through."
+msgstr "構造化する場合、 構造化しているオブジェクトに変換を適用しないようにするには、 `typing.Any` を使用します。 それは単に渡されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:492
+msgid "When unstructuring, `typing.Any` will make the value be unstructured according to its runtime class."
+msgstr "非構造化する場合、 `typing.Any` は、 値を実行時クラスに従って非構造化します。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:495
+msgid "Previously, the unstructuring rules for `Any` were underspecified, leading to inconsistent behavior."
+msgstr "以前は、 `Any` の非構造化ルールは十分に指定されておらず、 一貫性のない動作につながっていました。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:499
+msgid "`typing_extensions.Any` is now also supported."
+msgstr "`typing_extensions.Any` もサポートされるようになりました。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:502
+msgid "`typing.Literal`"
+msgstr "`typing.Literal`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:504
+msgid "When structuring, [PEP 586](https://peps.python.org/pep-0586/) literals are validated to be in the allowed set of values."
+msgstr "構造化する場合、 [PEP 586](https://peps.python.org/pep-0586/) リテラルは、 許可された値のセットに含まれていることが検証されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:513
+msgid "When unstructuring, literals are passed through."
+msgstr "非構造化する場合、 リテラルは渡されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:519
+msgid "`typing.NamedTuple`"
+msgstr "`typing.NamedTuple`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:521
+msgid "Named tuples with type hints (created from [`typing.NamedTuple`](https://docs.python.org/3/library/typing.html#typing.NamedTuple)) are supported. Named tuples are un/structured using tuples or lists by default."
+msgstr "型ヒント付きの名前付きタプル ( [`typing.NamedTuple`](https://docs.python.org/3/library/typing.html#typing.NamedTuple) から作成) がサポートされています。 名前付きタプルは、 デフォルトでタプルまたはリストを使用して構造化/非構造化されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:524
+#, python-brace-format
+msgid "The {mod}`cattrs.cols` module contains hook factories for un/structuring named tuples using dictionaries instead, [see here for details](customizing.md#customizing-named-tuples)."
+msgstr " {mod}`cattrs.cols` モジュールには、 代わりに辞書を使用して名前付きタプルを構造化/非構造化するためのフックファクトリが含まれています。 [詳細については、 こちらをご覧ください](customizing.md#customizing-named-tuples) 。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:531
+msgid "`typing.Final`"
+msgstr "`typing.Final`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:533
+msgid "[PEP 591](https://peps.python.org/pep-0591/) Final attribute types (`Final[int]`) are supported and handled according to the inner type (in this case, `int`)."
+msgstr "[PEP 591](https://peps.python.org/pep-0591/) Final 属性型 ( `Final[int]` ) がサポートされており、 内部型 (この場合は `int` ) に従って処理されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:540
+msgid "`typing.Annotated`"
+msgstr "`typing.Annotated`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:542
+msgid "[PEP 593](https://www.python.org/dev/peps/pep-0593/) annotations (`typing.Annotated[type, ...]`) are supported and are handled using the first type present in the annotated type."
+msgstr "[PEP 593](https://www.python.org/dev/peps/pep-0593/) アノテーション ( `typing.Annotated[type, ...]` ) がサポートされており、 アノテーション付きの型に存在する最初の型を使用して処理されます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:549
+msgid "Type Aliases"
+msgstr "型エイリアス"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:551
+msgid "[Type aliases](https://docs.python.org/3/library/typing.html#type-aliases) are supported on Python 3.12+ and are handled according to the rules for their underlying type. Their hooks can also be overriden using [](customizing.md#predicate-hooks)."
+msgstr "[型エイリアス](https://docs.python.org/3/library/typing.html#type-aliases) は、 Python 3.12 以降でサポートされており、 基になる型のルールに従って処理されます。 それらのフックは、 [](customizing.md#predicate-hooks) を使用してオーバーライドすることもできます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:555
+msgid "Type aliases using [`typing.TypeAlias`](https://docs.python.org/3/library/typing.html#typing.TypeAlias) aren't supported since there is no way at runtime to distinguish them from their underlying types."
+msgstr "[`typing.TypeAlias`](https://docs.python.org/3/library/typing.html#typing.TypeAlias) を使用する型エイリアスは、 実行時にそれらを基になる型と区別する方法がないため、 サポートされていません。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:582
+msgid "`typing.NewType`"
+msgstr "`typing.NewType`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:584
+#, python-brace-format
+msgid "[NewTypes](https://docs.python.org/3/library/typing.html#newtype) are supported and are handled according to the rules for their underlying type. Their hooks can also be overriden using {meth}`Converter.register_structure_hook() <cattrs.BaseConverter.register_structure_hook>`."
+msgstr "[NewTypes](https://docs.python.org/3/library/typing.html#newtype) がサポートされており、 基になる型のルールに従って処理されます。 それらのフックは、 {meth}`Converter.register_structure_hook() <cattrs.BaseConverter.register_structure_hook>` を使用してオーバーライドすることもできます。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:606
+msgid "`typing.Protocol`"
+msgstr "`typing.Protocol`"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:608
+msgid "[Protocols](https://peps.python.org/pep-0544/) cannot be structured by default and so require custom hooks."
+msgstr "[プロトコル](https://peps.python.org/pep-0544/) は、 デフォルトで構造化できず、 カスタムフックが必要です。"
+
+#: ../../downloads/cattrs/docs/defaulthooks.md:610
+msgid "Protocols are unstructured according to the actual runtime type of the value."
+msgstr "プロトコルは、 値の実際の実行時型に従って非構造化されます。"
+

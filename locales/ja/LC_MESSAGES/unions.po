@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Tin Tvrtković
+# This file is distributed under the same license as the cattrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cattrs 24.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-24 22:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../downloads/cattrs/docs/unions.md:1
+msgid "Handling Unions"
+msgstr "Union の扱い"
+
+#: ../../downloads/cattrs/docs/unions.md:3
+msgid "_cattrs_ is able to handle simple unions of _attrs_ classes and dataclasses [automatically](#default-union-strategy). More complex cases require converter customization (since there are many ways of handling unions)."
+msgstr "_cattrs_ は、_attrs_ クラスとデータクラスの単純な union を [自動的に](#default-union-strategy) 処理できます。 より複雑なケースでは、コンバーターのカスタマイズが必要です (union の処理方法が多数存在するため)。"
+
+#: ../../downloads/cattrs/docs/unions.md:6
+msgid "_cattrs_ also comes with a number of optional strategies to help handle unions:"
+msgstr "_cattrs_ には、union の処理を支援するためのオプションの戦略が多数用意されています。"
+
+#: ../../downloads/cattrs/docs/unions.md:8
+msgid "[tagged unions strategy](strategies.md#tagged-unions-strategy) mentioned below"
+msgstr "以下に言及する [タグ付き union 戦略](strategies.md#tagged-unions-strategy)"
+
+#: ../../downloads/cattrs/docs/unions.md:9
+msgid "[union passthrough strategy](strategies.md#union-passthrough), which is preapplied to all the [preconfigured](preconf.md) converters"
+msgstr "[union パススルー戦略](strategies.md#union-passthrough)。これは、[事前構成された](preconf.md) すべてのコンバーターに事前適用されます"
+
+#: ../../downloads/cattrs/docs/unions.md:11
+msgid "Default Union Strategy"
+msgstr "デフォルトの Union 戦略"
+
+#: ../../downloads/cattrs/docs/unions.md:13
+msgid "For convenience, _cattrs_ includes a default union structuring strategy which is a little more opinionated."
+msgstr "便宜上、_cattrs_ には、デフォルトの union 構造化戦略が含まれています。これは、やや独断的です。"
+
+#: ../../downloads/cattrs/docs/unions.md:15
+msgid "Given a union of several _attrs_ classes and/or dataclasses, the default union strategy will attempt to handle it in several ways."
+msgstr "いくつかの _attrs_ クラスまたはデータクラスの union が与えられた場合、デフォルトの union 戦略は、いくつかの方法でそれを処理しようとします。"
+
+#: ../../downloads/cattrs/docs/unions.md:17
+msgid "First, it will look for `Literal` fields. If _all members_ of the union contain a literal field, _cattrs_ will generate a disambiguation function based on the field."
+msgstr "まず、`Literal` フィールドを探します。 union の _すべてのメンバー_ がリテラルフィールドを含む場合、_cattrs_ はそのフィールドに基づいて曖昧さ回避関数を生成します。"
+
+#: ../../downloads/cattrs/docs/unions.md:32
+#, python-brace-format
+msgid "In this case, a payload containing `{\"field_one\": \"one\"}` will produce an instance of `ClassA`."
+msgstr "この場合、`{\"field_one\": \"one\"}` を含むペイロードは、`ClassA` のインスタンスを生成します。"
+
+#: ../../downloads/cattrs/docs/unions.md:35
+msgid "The following snippet can be used to disable the use of literal fields, restoring legacy behavior."
+msgstr "次のスニペットを使用すると、リテラルフィールドの使用を無効にし、レガシー動作を復元できます。"
+
+#: ../../downloads/cattrs/docs/unions.md:49
+msgid "If there are no appropriate fields, the strategy will examine the classes for **unique required fields**."
+msgstr "適切なフィールドがない場合、戦略はクラスを調べて **一意の必須フィールド** を探します。"
+
+#: ../../downloads/cattrs/docs/unions.md:51
+msgid "So, given a union of `ClassA` and `ClassB`:"
+msgstr "したがって、`ClassA` と `ClassB` の union が与えられた場合:"
+
+#: ../../downloads/cattrs/docs/unions.md:64
+msgid "the strategy will determine that if a payload contains the key `field_one` it should be handled as `ClassA`, and if it contains the key `field_two` it should be handled as `ClassB`. The field `field_with_default` will not be considered since it has a default value, so it gets treated as optional."
+msgstr "この戦略では、ペイロードにキー `field_one` が含まれている場合は `ClassA` として処理し、キー `field_two` が含まれている場合は `ClassB` として処理する必要があると判断します。 フィールド `field_with_default` はデフォルト値を持つため、オプションとして扱われるため、考慮されません。"
+
+#: ../../downloads/cattrs/docs/unions.md:68
+msgid "Literals can now be potentially used to disambiguate."
+msgstr "リテラルを使用して曖昧さを解消できるようになりました。"
+
+#: ../../downloads/cattrs/docs/unions.md:72
+msgid "Dataclasses are now supported in addition to _attrs_ classes."
+msgstr "_attrs_ クラスに加えて、データクラスがサポートされるようになりました。"
+
+#: ../../downloads/cattrs/docs/unions.md:75
+msgid "Unstructuring Unions with Extra Metadata"
+msgstr "追加のメタデータを使用した Union のアンストラクチャリング"
+
+#: ../../downloads/cattrs/docs/unions.md:78
+msgid "_cattrs_ comes with the [tagged unions strategy](strategies.md#tagged-unions-strategy) for handling this exact use-case since version 23.1. The example below has been left here for educational purposes, but you should prefer the strategy."
+msgstr "_cattrs_ には、バージョン 23.1 以降、このユースケースを処理するための [タグ付き union 戦略](strategies.md#tagged-unions-strategy) が付属しています。 以下の例は教育目的のためにここに残されていますが、この戦略を優先する必要があります。"
+
+#: ../../downloads/cattrs/docs/unions.md:82
+msgid "Let's assume a simple scenario of two classes, `ClassA` and `ClassB`, both of which have no distinct fields and so cannot be used automatically with _cattrs_."
+msgstr "2 つのクラス `ClassA` と `ClassB` の簡単なシナリオを想定してみましょう。どちらのクラスにも明確なフィールドがないため、_cattrs_ で自動的に使用することはできません。"
+
+#: ../../downloads/cattrs/docs/unions.md:96
+msgid "A naive approach to unstructuring either of these would yield identical dictionaries, and not enough information to restructure the classes."
+msgstr "これらのいずれかをアンストラクチャリングするナイーブなアプローチでは、同一の辞書が生成され、クラスを再構築するのに十分な情報が得られません。"
+
+#: ../../downloads/cattrs/docs/unions.md:104
+msgid "What we can do is ensure some extra information is present in the unstructured data, and then use that information to help structure later."
+msgstr "私たちにできることは、アンストラクチャリングされたデータにいくつかの追加情報が存在することを確認し、その情報を後で構造化するのに役立てることです。"
+
+#: ../../downloads/cattrs/docs/unions.md:107
+msgid "First, we register an unstructure hook for the `Union[ClassA, ClassB]` type."
+msgstr "まず、`Union[ClassA, ClassB]` 型のアンストラクチャーフックを登録します。"
+
+#: ../../downloads/cattrs/docs/unions.md:118
+msgid "Note that when unstructuring, we had to provide the `unstructure_as` parameter or _cattrs_ would have just applied the usual unstructuring rules to `ClassA`, instead of our special union hook."
+msgstr "アンストラクチャリングするときは、`unstructure_as` パラメーターを指定する必要がありました。そうしないと、_cattrs_ は特別な union フックの代わりに、通常のアンストラクチャリングルールを `ClassA` に適用しただけです。"
+
+#: ../../downloads/cattrs/docs/unions.md:122
+msgid "Now that the unstructured data contains some information, we can create a structuring hook to put it to use:"
+msgstr "アンストラクチャリングされたデータにいくつかの情報が含まれるようになったので、それを利用するためのストラクチャリングフックを作成できます。"
+

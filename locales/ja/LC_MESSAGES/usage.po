@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Tin Tvrtković
+# This file is distributed under the same license as the cattrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cattrs 24.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-24 22:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../downloads/cattrs/docs/usage.md:1
+msgid "Advanced Examples"
+msgstr "高度な例"
+
+#: ../../downloads/cattrs/docs/usage.md:3
+msgid "This section covers advanced use examples of _cattrs_ features."
+msgstr "この セクションでは、 _cattrs_ の機能の高度な使用例について説明します。"
+
+#: ../../downloads/cattrs/docs/usage.md:5
+msgid "Using Factory Hooks"
+msgstr "ファクトリ・フックの使用"
+
+#: ../../downloads/cattrs/docs/usage.md:7
+msgid "For this example, let's assume you have some attrs classes with snake case attributes, and you want to un/structure them as camel case."
+msgstr "この例では、 スネークケースの属性を持つ attrs クラスがあり、それらをキャメルケースとしてアン/ストラクチャしたいと仮定しましょう。"
+
+#: ../../downloads/cattrs/docs/usage.md:10
+msgid "A simpler and better approach to this problem is to simply make your class attributes camel case. However, this is a good example of the power of hook factories and _cattrs'_ composition-based design."
+msgstr "この 問題に対するよりシンプルでより良いアプローチは、 クラス属性をキャメルケースにすることです。ただし、 これはフック・ファクトリと _cattrs_ のコンポジション・ベースの設計の優れた例です。"
+
+#: ../../downloads/cattrs/docs/usage.md:14
+msgid "Here's our simple data model:"
+msgstr "簡単なデータモデルを次に示します。"
+
+#: ../../downloads/cattrs/docs/usage.md:28
+msgid "Let's examine our options one by one, starting with the simplest: writing manual un/structuring hooks."
+msgstr "最も簡単な方法から始めて、 選択肢を1つずつ検討してみましょう。手動でアン/ストラクチャ・フックを作成します。"
+
+#: ../../downloads/cattrs/docs/usage.md:30
+msgid "We just write the code by hand and register it:"
+msgstr "コードを手で記述して登録するだけです。"
+
+#: ../../downloads/cattrs/docs/usage.md:43
+msgid "(Let's skip the other unstructure hook and 2 structure hooks due to verbosity.)"
+msgstr "（冗長になるため、 他のアンストラクチャ・フックと2つのストラクチャ・フックは省略します。）"
+
+#: ../../downloads/cattrs/docs/usage.md:45
+msgid "This will get us where we want to go, but the drawbacks are immediately obvious: we'd need to write a ton of code ourselves, wasting effort, increasing our maintenance burden and risking bugs. Obviously this won't do."
+msgstr "これで目的は達成できますが、 欠点はすぐに明らかです。大量のコードを自分で記述する必要があり、 労力を浪費し、 メンテナンスの負担が増え、 バグのリスクが高まります。明らかにこれでは不十分です。"
+
+#: ../../downloads/cattrs/docs/usage.md:49
+#, python-brace-format
+msgid "Why write code when we can write code to write code for us? In this case this code has already been written for you. _cattrs_ contains a module, {mod}`cattrs.gen`, with functions to automatically generate hooks exactly like this. These functions also take parameters to customize the generated hooks."
+msgstr "コードを記述してコードを記述できるのに、 なぜコードを記述するのでしょうか？この場合、 このコードはすでに記述されています。_cattrs_ には、 まさにこのようなフックを自動的に生成する関数を持つモジュール {mod}`cattrs.gen` が含まれています。これらの関数は、 生成されたフックをカスタマイズするためのパラメータも取ります。"
+
+#: ../../downloads/cattrs/docs/usage.md:54
+msgid "We can generate and register the renaming hooks we need:"
+msgstr "必要な名前変更フックを生成して登録できます。"
+
+#: ../../downloads/cattrs/docs/usage.md:71
+msgid "(Again skipping the other hooks due to verbosity.)"
+msgstr "（繰り返しますが、 冗長になるため、 他のフックは省略します。）"
+
+#: ../../downloads/cattrs/docs/usage.md:73
+msgid "This is still too verbose and manual for our tastes, so let's automate it further. We need a way to convert snake case identifiers to camel case, so let's grab one from Stack Overflow:"
+msgstr "これはまだ冗長で手動すぎるため、 さらに自動化しましょう。スネークケースの識別子をキャメルケースに変換する方法が必要なので、 Stack Overflow から1つ取得しましょう。"
+
+#: ../../downloads/cattrs/docs/usage.md:83
+msgid "We can combine this with [`attrs.fields`](https://www.attrs.org/en/stable/api.html#attrs.fields) to save us some typing:"
+msgstr "これを [`attrs.fields`](https://www.attrs.org/en/stable/api.html#attrs.fields) と組み合わせることで、 入力を省くことができます。"
+
+#: ../../downloads/cattrs/docs/usage.md:108
+msgid "(Skipping the structuring hooks due to verbosity.)"
+msgstr "（冗長になるため、 ストラクチャ・フックは省略します。）"
+
+#: ../../downloads/cattrs/docs/usage.md:110
+msgid "Now we're getting somewhere, but we still need to do this for each class separately. The final step is using hook factories instead of hooks directly."
+msgstr "これで何とかなりそうですが、 クラスごとに個別にこれを行う必要があります。最後のステップは、 フックを直接使用する代わりに、 フック・ファクトリを使用することです。"
+
+#: ../../downloads/cattrs/docs/usage.md:113
+msgid "Hook factories are functions that return hooks. They are also registered using predicates instead of being attached to classes directly, like normal un/structure hooks. Predicates are functions that given a type return a boolean whether they handle it."
+msgstr "フック・ファクトリは、 フックを返す関数です。また、 通常のアン/ストラクチャ・フックのようにクラスに直接アタッチされるのではなく、 述語を使用して登録されます。述語は、 型が与えられた場合に、 それを処理するかどうかを示すブール値を返す関数です。"
+
+#: ../../downloads/cattrs/docs/usage.md:118
+msgid "We want our hook factories to trigger for all _attrs_ classes, so we need a predicate to recognize whether a type is an _attrs_ class. Luckily, _attrs_ comes with [`attrs.has`](https://www.attrs.org/en/stable/api.html#attrs.has), which is exactly this."
+msgstr "_attrs_ クラスすべてに対してフック・ファクトリをトリガーしたいので、 型が _attrs_ クラスであるかどうかを認識するための述語が必要です。幸いなことに、 _attrs_ には [`attrs.has`](https://www.attrs.org/en/stable/api.html#attrs.has) が付属しています。これはまさにそれです。"
+
+#: ../../downloads/cattrs/docs/usage.md:122
+msgid "As the final step, we can combine all of this into two hook factories:"
+msgstr "最後のステップとして、 これらすべてを2つのフック・ファクトリにまとめることができます。"
+
+#: ../../downloads/cattrs/docs/usage.md:163
+msgid "The `converter` instance will now un/structure every attrs class to camel case. Nothing has been omitted from this final example; it's complete."
+msgstr "`converter` インスタンスは、 すべての attrs クラスをキャメルケースにアン/ストラクチャするようになります。この最後の例から何も省略されていません。これは完全です。"
+
+#: ../../downloads/cattrs/docs/usage.md:167
+msgid "Using Fallback Key Names"
+msgstr "フォールバック・キー名の使用"
+
+#: ../../downloads/cattrs/docs/usage.md:169
+msgid "Sometimes when structuring data, the input data may be in multiple formats that need to be converted into a common attribute."
+msgstr "データを構造化するとき、 入力データは、 共通の属性に変換する必要がある複数の形式である場合があります。"
+
+#: ../../downloads/cattrs/docs/usage.md:171
+#, python-brace-format
+msgid "Consider an example where a data store creates a new schema version and renames a key (ie, `{'old_field':  'value1'}` in v1 becomes `{'new_field': 'value1'}` in v2), while also leaving existing records in the system with the V1 schema. Both keys should convert to the same field."
+msgstr "データストアが新しいスキーマ・バージョンを作成し、 キーの名前を変更する例を考えてみましょう（つまり、 v1 の `{'old_field': 'value1'}` が v2 の `{'new_field': 'value1'}` になる）。同時に、 既存のレコードをV1スキーマのシステムに残します。両方のキーを同じフィールドに変換する必要があります。"
+
+#: ../../downloads/cattrs/docs/usage.md:173
+msgid "Here, builtin customizations such as [rename](./customizing.md#rename) are insufficient - _cattrs_ cannot structure both `old_field` and `new_field` into a single field using `rename`, at least not on the same converter."
+msgstr "ここでは、 [rename](./customizing.md#rename) などの組み込みのカスタマイズは不十分です。_cattrs_ は、 少なくとも同じコンバーターでは、 `rename` を使用して `old_field` と `new_field` の両方を単一のフィールドに構造化できません。"
+
+#: ../../downloads/cattrs/docs/usage.md:175
+msgid "In order to support both fields, you can apply a little preprocessing to the default _cattrs_ structuring hooks. One approach is to write the following decorator and apply it to your class."
+msgstr "両方のフィールドをサポートするために、 デフォルトの _cattrs_ 構造化フックに少し前処理を適用できます。1つのアプローチは、 次のデコレータを作成し、 クラスに適用することです。"
+
+#: ../../downloads/cattrs/docs/usage.md:213
+msgid "_cattrs_ will now structure both key names into `new_field` on your class."
+msgstr "_cattrs_ は、 両方のキー名をクラスの `new_field` に構造化するようになります。"
+
