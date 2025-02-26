@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Tin Tvrtković
+# This file is distributed under the same license as the cattrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cattrs 24.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-24 22:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../downloads/cattrs/docs/basics.md:1
+msgid "The Basics"
+msgstr "基本"
+
+#: ../../downloads/cattrs/docs/basics.md:5
+#, python-brace-format
+msgid "All _cattrs_ functionality is exposed through a {class}`cattrs.Converter` object. A global converter is provided for convenience as {data}`cattrs.global_converter` but more complex customizations should be performed on private instances, any number of which can be made."
+msgstr "_cattrs_ のすべての機能は、{class}`cattrs.Converter` オブジェクトを通じて公開されます。グローバル・コンバーターは、{data}`cattrs.global_converter` として便宜上提供されていますが、より複雑なカスタマイズは、プライベート・インスタンスで実行する必要があります。プライベート・インスタンスはいくつでも作成できます。"
+
+#: ../../downloads/cattrs/docs/basics.md:9
+msgid "Converters and Hooks"
+msgstr "コンバーターとフック"
+
+#: ../../downloads/cattrs/docs/basics.md:11
+msgid "The core functionality of a converter is structuring and unstructuring data by composing [provided](defaulthooks.md) and [custom handling functions](customizing.md), called _hooks_."
+msgstr "コンバーターのコア機能は、_フック_ と呼ばれる、[提供された](defaulthooks.md) および [カスタム処理関数](customizing.md) を構成することによって、データを構造化および非構造化することです。"
+
+#: ../../downloads/cattrs/docs/basics.md:13
+#, python-brace-format
+msgid "To create a private converter, instantiate a {class}`cattrs.Converter`. Converters are relatively cheap; users are encouraged to have as many as they need."
+msgstr "プライベート・コンバーターを作成するには、{class}`cattrs.Converter` をインスタンス化します。コンバーターは比較的安価なので、ユーザーは必要な数だけ持つことをお勧めします。"
+
+#: ../../downloads/cattrs/docs/basics.md:15
+#, python-brace-format
+msgid "The two main methods, {meth}`structure <cattrs.BaseConverter.structure>` and {meth}`unstructure <cattrs.BaseConverter.unstructure>`, are used to convert between _structured_ and _unstructured_ data."
+msgstr "2 つの主要なメソッド、{meth}`structure <cattrs.BaseConverter.structure>` と {meth}`unstructure <cattrs.BaseConverter.unstructure>` は、_構造化_ データと _非構造化_ データの間で変換するために使用されます。"
+
+#: ../../downloads/cattrs/docs/basics.md:31
+msgid "_cattrs_ comes with a rich library of un/structuring hooks by default but it excels at composing custom hooks with built-in ones."
+msgstr "_cattrs_ には、デフォルトで豊富な un/structuring フックのライブラリが付属していますが、組み込みのフックとカスタム・フックを組み合わせるのに優れています。"
+
+#: ../../downloads/cattrs/docs/basics.md:33
+msgid "The simplest approach to customization is writing a new hook from scratch. For example, we can write our own hook for the `int` class and register it to a converter."
+msgstr "カスタマイズへの最も簡単なアプローチは、新しいフックをゼロから作成することです。たとえば、`int` クラス用に独自のフックを作成し、それをコンバーターに登録できます。"
+
+#: ../../downloads/cattrs/docs/basics.md:48
+msgid "Now, any other hook converting an `int` will use it."
+msgstr "これで、`int` を変換する他のフックはそれを使用します。"
+
+#: ../../downloads/cattrs/docs/basics.md:50
+msgid "Another approach to customization is wrapping (composing) an existing hook with your own function. A base hook can be obtained from a converter and then be subjected to the very rich machinery of function composition that Python offers."
+msgstr "カスタマイズへの別のアプローチは、既存のフックを独自の関数でラップ (構成) することです。ベース・フックはコンバーターから取得し、Python が提供する関数合成の非常に豊富なメカニズムに適用できます。"
+
+#: ../../downloads/cattrs/docs/basics.md:65
+#, python-brace-format
+msgid "(`cattrs.structure({}, Model)` is equivalent to `cattrs.get_structure_hook(Model)({}, Model)`.)"
+msgstr "(`cattrs.structure({}, Model)` は、`cattrs.get_structure_hook(Model)({}, Model)` と同等です。)"
+
+#: ../../downloads/cattrs/docs/basics.md:67
+msgid "Now if we use this hook to structure a `Model`, through ✨the magic of function composition✨ that hook will use our old `int_hook`."
+msgstr "ここで、このフックを使用して `Model` を構造化すると、✨関数合成の魔法✨ により、そのフックは古い `int_hook` を使用します。"
+
+#: ../../downloads/cattrs/docs/basics.md:86
+msgid "To continue reading about customizing _cattrs_, see [](customizing.md). More advanced structuring customizations are commonly called [](strategies.md)."
+msgstr "_cattrs_ のカスタマイズの詳細については、[](customizing.md) を参照してください。より高度な構造化のカスタマイズは、一般に [](strategies.md) と呼ばれます。"
+
+#: ../../downloads/cattrs/docs/basics.md:89
+msgid "Global Converter"
+msgstr "グローバル・コンバーター"
+
+#: ../../downloads/cattrs/docs/basics.md:91
+#, python-brace-format
+msgid "Global _cattrs_ functions, such as {meth}`cattrs.structure`, use a single {data}`global converter <cattrs.global_converter>`. Changes done to this global converter, such as registering new structure and unstructure hooks, affect all code using the global functions."
+msgstr "{meth}`cattrs.structure` などのグローバル _cattrs_ 関数は、単一の {data}`グローバル・コンバーター <cattrs.global_converter>` を使用します。新しい構造および非構造化フックの登録など、このグローバル・コンバーターに加えられた変更は、グローバル関数を使用するすべてのコードに影響します。"
+
+#: ../../downloads/cattrs/docs/basics.md:94
+msgid "The following functions implicitly use this global converter:"
+msgstr "次の関数は、このグローバル・コンバーターを暗黙的に使用します。"
+
+#: ../../downloads/cattrs/docs/basics.md:96
+#, python-brace-format
+msgid "{meth}`cattrs.structure`"
+msgstr "{meth}`cattrs.structure`"
+
+#: ../../downloads/cattrs/docs/basics.md:97
+#, python-brace-format
+msgid "{meth}`cattrs.unstructure`"
+msgstr "{meth}`cattrs.unstructure`"
+
+#: ../../downloads/cattrs/docs/basics.md:98
+#, python-brace-format
+msgid "{meth}`cattrs.get_structure_hook`"
+msgstr "{meth}`cattrs.get_structure_hook`"
+
+#: ../../downloads/cattrs/docs/basics.md:99
+#, python-brace-format
+msgid "{meth}`cattrs.get_unstructure_hook`"
+msgstr "{meth}`cattrs.get_unstructure_hook`"
+
+#: ../../downloads/cattrs/docs/basics.md:100
+#, python-brace-format
+msgid "{meth}`cattrs.structure_attrs_fromtuple`"
+msgstr "{meth}`cattrs.structure_attrs_fromtuple`"
+
+#: ../../downloads/cattrs/docs/basics.md:101
+#, python-brace-format
+msgid "{meth}`cattrs.structure_attrs_fromdict`"
+msgstr "{meth}`cattrs.structure_attrs_fromdict`"
+
+#: ../../downloads/cattrs/docs/basics.md:103
+msgid "Changes made to the global converter will affect the behavior of these functions."
+msgstr "グローバル・コンバーターに加えられた変更は、これらの関数の動作に影響します。"
+
+#: ../../downloads/cattrs/docs/basics.md:105
+#, python-brace-format
+msgid "Larger applications are strongly encouraged to create and customize different, private instances of {class}`cattrs.Converter`."
+msgstr "大規模なアプリケーションでは、{class}`cattrs.Converter` の異なるプライベート・インスタンスを作成してカスタマイズすることを強くお勧めします。"
+

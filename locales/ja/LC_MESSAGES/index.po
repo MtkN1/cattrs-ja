@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Tin Tvrtković
+# This file is distributed under the same license as the cattrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cattrs 24.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-24 22:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../downloads/cattrs/docs/index.md:24
+msgid "Introduction"
+msgstr "はじめに"
+
+#: ../../downloads/cattrs/docs/index.md:36
+msgid "User Guide"
+msgstr "ユーザー ・ ガイド"
+
+#: ../../downloads/cattrs/docs/index.md:53
+msgid "API"
+msgstr "API"
+
+#: ../../downloads/cattrs/docs/index.md:53
+msgid "Reference"
+msgstr "リファレンス"
+
+#: ../../downloads/cattrs/docs/index.md:65
+msgid "Dev Guide"
+msgstr "開発ガイド"
+
+#: ../../downloads/cattrs/docs/index.md:76
+msgid "PyPI"
+msgstr "PyPI"
+
+#: ../../downloads/cattrs/docs/index.md:76
+msgid "GitHub"
+msgstr "GitHub"
+
+#: ../../downloads/cattrs/docs/index.md:76
+msgid "Meta"
+msgstr "メタ"
+
+#: ../../downloads/cattrs/docs/index.md:1
+msgid "*cattrs*: Flexible Object Serialization and Validation"
+msgstr "*cattrs*: 柔軟なオブジェクトのシリアライズとバリデーション"
+
+#: ../../downloads/cattrs/docs/index.md:3
+msgid "*Because validation belongs to the edges.*"
+msgstr "*なぜなら、 バリデーションはエッジに属するから。*"
+
+#: ../../downloads/cattrs/README.md:864
+msgid "**cattrs** is a Swiss Army knife for (un)structuring and validating data in Python. In practice, that means it converts **unstructured dictionaries** into **proper classes** and back, while **validating** their contents."
+msgstr "**cattrs** は、 Python でのデータの (非) 構造化と検証のためのスイス ・ アーミー ・ ナイフです。 実際には、 **構造化されていない辞書** を **適切なクラス** に変換し、 その内容を **検証** します。"
+
+#: ../../downloads/cattrs/README.md:1144
+msgid "_cattrs_ works best with [_attrs_](https://www.attrs.org/) classes, and [dataclasses](https://docs.python.org/3/library/dataclasses.html) where simple (un-)structuring works out of the box, even for nested data, without polluting your data model with serialization details:"
+msgstr "_cattrs_ は、 [_attrs_](https://www.attrs.org/) クラスや [dataclasses](https://docs.python.org/3/library/dataclasses.html) との相性が抜群です。 シンプルな (非) 構造化は、 ネストされたデータであっても、 シリアライズの詳細でデータ ・ モデルを汚染することなく、 すぐに利用できます:"
+
+#: ../../downloads/cattrs/docs/index.md:19
+msgid "However, *cattrs* does **much** more with a focus on **functional composition** and **not coupling** your data model to its serialization and validation rules."
+msgstr "しかし、 *cattrs* は、 **関数型合成** に焦点を当て、 データ ・ モデルをシリアライズおよびバリデーション ・ ルールに **結合させない** ことで、 **はるかに** 多くのことを行います。"
+
+#: ../../downloads/cattrs/docs/index.md:21
+#, python-brace-format
+msgid "To learn more on why to use *cattrs*, have a look at {doc}`why`, and if you're convinced jump right into {doc}`basics`!"
+msgstr "*cattrs* を使用する理由の詳細については、 {doc}`why` を参照してください。 納得したら、 {doc}`basics` にすぐに飛び込みましょう!"
+

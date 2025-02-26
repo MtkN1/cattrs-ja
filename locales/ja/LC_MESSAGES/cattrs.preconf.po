@@ -1,0 +1,355 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Tin Tvrtković
+# This file is distributed under the same license as the cattrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cattrs 24.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-24 22:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../downloads/cattrs/docs/cattrs.preconf.rst:2
+msgid "cattrs.preconf package"
+msgstr "cattrs.preconf パッケージ"
+
+#: cattrs.preconf.wrap:1 of
+msgid "Wrap a `Converter` `__init__` in a type-safe way."
+msgstr "`Converter` の `__init__` をタイプセーフな方法でラップします。"
+
+#: ../../downloads/cattrs/docs/cattrs.preconf.rst
+#: cattrs.preconf.msgspec.MsgspecJsonConverter.dumps
+#: cattrs.preconf.msgspec.MsgspecJsonConverter.get_dumps_hook
+#: cattrs.preconf.msgspec.MsgspecJsonConverter.get_loads_hook
+#: cattrs.preconf.msgspec.MsgspecJsonConverter.loads cattrs.preconf.wrap of
+msgid "Parameters"
+msgstr "パラメータ"
+
+#: ../../downloads/cattrs/docs/cattrs.preconf.rst
+#: cattrs.preconf.msgspec.MsgspecJsonConverter.dumps
+#: cattrs.preconf.msgspec.MsgspecJsonConverter.get_dumps_hook
+#: cattrs.preconf.msgspec.MsgspecJsonConverter.get_loads_hook
+#: cattrs.preconf.msgspec.MsgspecJsonConverter.loads cattrs.preconf.wrap of
+msgid "Return type"
+msgstr "戻り値の型"
+
+#: ../../downloads/cattrs/docs/cattrs.preconf.rst:10
+msgid "Submodules"
+msgstr "サブモジュール"
+
+#: ../../downloads/cattrs/docs/cattrs.preconf.rst:13
+msgid "cattrs.preconf.bson module"
+msgstr "cattrs.preconf.bson モジュール"
+
+#: cattrs.preconf.bson:1 of
+msgid "Preconfigured converters for bson."
+msgstr "bson 用にあらかじめ設定されたコンバーター。"
+
+#: cattrs.preconf.bson.Base85Bytes:1 of
+msgid "Bases: :py:class:`bytes`"
+msgstr "基底クラス: :py:class:`bytes`"
+
+#: cattrs.preconf.bson.Base85Bytes:1 of
+msgid "A subclass to help with binary key encoding/decoding."
+msgstr "バイナリキーのエンコード/デコードを支援するサブクラス。"
+
+#: cattrs.preconf.bson.BsonConverter:1 cattrs.preconf.cbor2.Cbor2Converter:1
+#: cattrs.preconf.json.JsonConverter:1
+#: cattrs.preconf.msgpack.MsgpackConverter:1
+#: cattrs.preconf.msgspec.MsgspecJsonConverter:1
+#: cattrs.preconf.orjson.OrjsonConverter:1
+#: cattrs.preconf.pyyaml.PyyamlConverter:1
+#: cattrs.preconf.tomlkit.TomlkitConverter:1
+#: cattrs.preconf.ujson.UjsonConverter:1 of
+msgid "Bases: :py:class:`~cattrs.converters.Converter`"
+msgstr "基底クラス: :py:class:`~cattrs.converters.Converter`"
+
+#: cattrs.preconf.bson.BsonConverter:1 cattrs.preconf.cbor2.Cbor2Converter:1
+#: cattrs.preconf.json.JsonConverter:1
+#: cattrs.preconf.msgpack.MsgpackConverter:1
+#: cattrs.preconf.msgspec.MsgspecJsonConverter:3
+#: cattrs.preconf.orjson.OrjsonConverter:1
+#: cattrs.preconf.pyyaml.PyyamlConverter:1
+#: cattrs.preconf.tomlkit.TomlkitConverter:1
+#: cattrs.preconf.ujson.UjsonConverter:1 of
+msgid "Whether to use a slightly slower mode for detailed validation errors."
+msgstr "詳細な検証エラーのために、わずかに遅いモードを使用するかどうか。"
+
+#: cattrs.preconf.bson.BsonConverter:3 cattrs.preconf.cbor2.Cbor2Converter:3
+#: cattrs.preconf.json.JsonConverter:3
+#: cattrs.preconf.msgpack.MsgpackConverter:3
+#: cattrs.preconf.msgspec.MsgspecJsonConverter:5
+#: cattrs.preconf.orjson.OrjsonConverter:3
+#: cattrs.preconf.pyyaml.PyyamlConverter:3
+#: cattrs.preconf.tomlkit.TomlkitConverter:3
+#: cattrs.preconf.ujson.UjsonConverter:3 of
+msgid "A hook factory to be called when no registered unstructuring hooks match."
+msgstr "登録されている非構造化フックが一致しない場合に呼び出されるフックファクトリ。"
+
+#: cattrs.preconf.bson.BsonConverter:5 cattrs.preconf.cbor2.Cbor2Converter:5
+#: cattrs.preconf.json.JsonConverter:5
+#: cattrs.preconf.msgpack.MsgpackConverter:5
+#: cattrs.preconf.msgspec.MsgspecJsonConverter:7
+#: cattrs.preconf.orjson.OrjsonConverter:5
+#: cattrs.preconf.pyyaml.PyyamlConverter:5
+#: cattrs.preconf.tomlkit.TomlkitConverter:5
+#: cattrs.preconf.ujson.UjsonConverter:5 of
+msgid "A hook factory to be called when no registered structuring hooks match."
+msgstr "登録されている構造化フックが一致しない場合に呼び出されるフックファクトリ。"
+
+#: cattrs.preconf.bson.BsonConverter:8 cattrs.preconf.cbor2.Cbor2Converter:8
+#: cattrs.preconf.json.JsonConverter:8
+#: cattrs.preconf.msgpack.MsgpackConverter:8
+#: cattrs.preconf.msgspec.MsgspecJsonConverter:10
+#: cattrs.preconf.orjson.OrjsonConverter:8
+#: cattrs.preconf.pyyaml.PyyamlConverter:8
+#: cattrs.preconf.tomlkit.TomlkitConverter:8
+#: cattrs.preconf.ujson.UjsonConverter:8 of
+msgid "*unstructure_fallback_factory*"
+msgstr "*unstructure_fallback_factory*"
+
+#: cattrs.preconf.bson.BsonConverter:9 cattrs.preconf.cbor2.Cbor2Converter:9
+#: cattrs.preconf.json.JsonConverter:9
+#: cattrs.preconf.msgpack.MsgpackConverter:9
+#: cattrs.preconf.msgspec.MsgspecJsonConverter:11
+#: cattrs.preconf.orjson.OrjsonConverter:9
+#: cattrs.preconf.pyyaml.PyyamlConverter:9
+#: cattrs.preconf.tomlkit.TomlkitConverter:9
+#: cattrs.preconf.ujson.UjsonConverter:9 of
+msgid "*structure_fallback_factory*"
+msgstr "*structure_fallback_factory*"
+
+#: cattrs.preconf.bson.configure_converter:1 of
+msgid "Configure the converter for use with the bson library."
+msgstr "bson ライブラリで使用するようにコンバーターを設定します。"
+
+#: cattrs.preconf.bson.configure_converter:3
+#: cattrs.preconf.cbor2.configure_converter:4
+#: cattrs.preconf.json.configure_converter:6
+#: cattrs.preconf.msgpack.configure_converter:4
+#: cattrs.preconf.orjson.configure_converter:6
+#: cattrs.preconf.tomlkit.configure_converter:4
+#: cattrs.preconf.ujson.configure_converter:5 of
+msgid "sets are serialized as lists"
+msgstr "セットはリストとしてシリアライズされます"
+
+#: cattrs.preconf.bson.configure_converter:4 of
+msgid "byte mapping keys are base85-encoded into strings when unstructuring, and reverse"
+msgstr "バイトマッピングキーは、非構造化時に base85 でエンコードされて文字列になり、逆もまた同様です"
+
+#: cattrs.preconf.bson.configure_converter:5 of
+msgid "non-string, non-byte mapping keys are coerced into strings when unstructuring"
+msgstr "文字列でもバイトでもないマッピングキーは、非構造化時に文字列に強制変換されます"
+
+#: cattrs.preconf.bson.configure_converter:6 of
+msgid "a deserialization hook is registered for bson.ObjectId by default"
+msgstr "bson.ObjectId のデシリアライゼーションフックはデフォルトで登録されます"
+
+#: ../../downloads/cattrs/docs/cattrs.preconf.rst:21
+msgid "cattrs.preconf.cbor2 module"
+msgstr "cattrs.preconf.cbor2 モジュール"
+
+#: cattrs.preconf.cbor2:1 of
+msgid "Preconfigured converters for cbor2."
+msgstr "cbor2 用にあらかじめ設定されたコンバーター。"
+
+#: cattrs.preconf.cbor2.configure_converter:1 of
+msgid "Configure the converter for use with the cbor2 library."
+msgstr "cbor2 ライブラリで使用するようにコンバーターを設定します。"
+
+#: cattrs.preconf.cbor2.configure_converter:3
+#: cattrs.preconf.msgpack.configure_converter:3 of
+msgid "datetimes are serialized as timestamp floats"
+msgstr "日時はタイムスタンプ浮動小数点数としてシリアライズされます"
+
+#: ../../downloads/cattrs/docs/cattrs.preconf.rst:29
+msgid "cattrs.preconf.json module"
+msgstr "cattrs.preconf.json モジュール"
+
+#: cattrs.preconf.json:1 of
+msgid "Preconfigured converters for the stdlib json."
+msgstr "stdlib json 用にあらかじめ設定されたコンバーター。"
+
+#: cattrs.preconf.json.configure_converter:1 of
+msgid "Configure the converter for use with the stdlib json module."
+msgstr "stdlib json モジュールで使用するようにコンバーターを設定します。"
+
+#: cattrs.preconf.json.configure_converter:3
+#: cattrs.preconf.orjson.configure_converter:3
+#: cattrs.preconf.tomlkit.configure_converter:3 of
+msgid "bytes are serialized as base85 strings"
+msgstr "バイトは base85 文字列としてシリアライズされます"
+
+#: cattrs.preconf.json.configure_converter:4
+#: cattrs.preconf.ujson.configure_converter:4 of
+msgid "datetimes are serialized as ISO 8601"
+msgstr "日時は ISO 8601 としてシリアライズされます"
+
+#: cattrs.preconf.json.configure_converter:5 of
+msgid "counters are serialized as dicts"
+msgstr "カウンターは辞書としてシリアライズされます"
+
+#: cattrs.preconf.json.configure_converter:7 of
+msgid "union passthrough is configured for unions of strings, bools, ints, floats and None"
+msgstr "union passthrough は、文字列、bool、int、float、および None の union に対して構成されます"
+
+#: ../../downloads/cattrs/docs/cattrs.preconf.rst:37
+msgid "cattrs.preconf.msgpack module"
+msgstr "cattrs.preconf.msgpack モジュール"
+
+#: cattrs.preconf.msgpack:1 of
+msgid "Preconfigured converters for msgpack."
+msgstr "msgpack 用にあらかじめ設定されたコンバーター。"
+
+#: cattrs.preconf.msgpack.configure_converter:1 of
+msgid "Configure the converter for use with the msgpack library."
+msgstr "msgpack ライブラリで使用するようにコンバーターを設定します。"
+
+#: ../../downloads/cattrs/docs/cattrs.preconf.rst:45
+msgid "cattrs.preconf.msgspec module"
+msgstr "cattrs.preconf.msgspec モジュール"
+
+#: cattrs.preconf.msgspec:1 of
+msgid "Preconfigured converters for msgspec."
+msgstr "msgspec 用にあらかじめ設定されたコンバーター。"
+
+#: cattrs.preconf.msgspec.MsgspecJsonConverter:1 of
+msgid "A converter specialized for the _msgspec_ library."
+msgstr "_msgspec_ ライブラリに特化したコンバーター。"
+
+#: ../../docstring cattrs.preconf.msgspec.MsgspecJsonConverter.encoder:1 of
+msgid "The msgspec encoder for dumping."
+msgstr "ダンプ用の msgspec エンコーダー。"
+
+#: cattrs.preconf.msgspec.MsgspecJsonConverter.dumps:1 of
+msgid "Unstructure and encode `obj` into JSON bytes."
+msgstr "`obj` を非構造化して JSON バイトにエンコードします。"
+
+#: cattrs.preconf.msgspec.MsgspecJsonConverter.get_dumps_hook:1 of
+msgid "Produce a `dumps` hook for the given type."
+msgstr "指定された型の `dumps` フックを生成します。"
+
+#: cattrs.preconf.msgspec.MsgspecJsonConverter.loads:1 of
+msgid "Decode and structure `cl` from the provided JSON bytes."
+msgstr "提供された JSON バイトから `cl` をデコードして構造化します。"
+
+#: cattrs.preconf.msgspec.MsgspecJsonConverter.get_loads_hook:1 of
+msgid "Produce a `loads` hook for the given type."
+msgstr "指定された型の `loads` フックを生成します。"
+
+#: cattrs.preconf.msgspec.configure_converter:1 of
+msgid "Configure the converter for the msgspec library."
+msgstr "msgspec ライブラリで使用するようにコンバーターを設定します。"
+
+#: cattrs.preconf.msgspec.configure_converter:3 of
+msgid "bytes are serialized as base64 strings, directly by msgspec"
+msgstr "バイトは base64 文字列としてシリアライズされ、msgspec によって直接処理されます"
+
+#: cattrs.preconf.msgspec.configure_converter:4 of
+msgid "datetimes and dates are passed through to be serialized as RFC 3339 directly"
+msgstr "日時と日付は、RFC 3339 として直接シリアライズされるように渡されます"
+
+#: cattrs.preconf.msgspec.configure_converter:5 of
+msgid "enums are passed through to msgspec directly"
+msgstr "enum は msgspec に直接渡されます"
+
+#: cattrs.preconf.msgspec.configure_converter:6 of
+msgid "union passthrough configured for str, bool, int, float and None"
+msgstr "str、bool、int、float、None に対して union passthrough が構成されています"
+
+#: ../../downloads/cattrs/docs/cattrs.preconf.rst:53
+msgid "cattrs.preconf.orjson module"
+msgstr "cattrs.preconf.orjson モジュール"
+
+#: cattrs.preconf.orjson:1 of
+msgid "Preconfigured converters for orjson."
+msgstr "orjson 用にあらかじめ設定されたコンバーター。"
+
+#: cattrs.preconf.orjson.configure_converter:1 of
+msgid "Configure the converter for use with the orjson library."
+msgstr "orjson ライブラリで使用するようにコンバーターを設定します。"
+
+#: cattrs.preconf.orjson.configure_converter:4 of
+msgid "datetimes and dates are passed through to be serialized as RFC 3339 by orjson"
+msgstr "日時と日付は、orjson によって RFC 3339 としてシリアライズされるように渡されます"
+
+#: cattrs.preconf.orjson.configure_converter:5
+#: cattrs.preconf.pyyaml.configure_converter:6 of
+msgid "typed namedtuples are serialized as lists"
+msgstr "型付き namedtuple はリストとしてシリアライズされます"
+
+#: cattrs.preconf.orjson.configure_converter:7 of
+msgid "string enum mapping keys have special handling"
+msgstr "文字列 enum マッピングキーは特別な処理を必要とします"
+
+#: cattrs.preconf.orjson.configure_converter:8
+#: cattrs.preconf.tomlkit.configure_converter:6 of
+msgid "mapping keys are coerced into strings when unstructuring"
+msgstr "マッピングキーは、非構造化時に文字列に強制変換されます"
+
+#: ../../downloads/cattrs/docs/cattrs.preconf.rst:61
+msgid "cattrs.preconf.pyyaml module"
+msgstr "cattrs.preconf.pyyaml モジュール"
+
+#: cattrs.preconf.pyyaml:1 of
+msgid "Preconfigured converters for pyyaml."
+msgstr "pyyaml 用にあらかじめ設定されたコンバーター。"
+
+#: cattrs.preconf.pyyaml.configure_converter:1 of
+msgid "Configure the converter for use with the pyyaml library."
+msgstr "pyyaml ライブラリで使用するようにコンバーターを設定します。"
+
+#: cattrs.preconf.pyyaml.configure_converter:3 of
+msgid "frozensets are serialized as lists"
+msgstr "frozenset はリストとしてシリアライズされます"
+
+#: cattrs.preconf.pyyaml.configure_converter:4 of
+msgid "string enums are converted into strings explicitly"
+msgstr "文字列 enum は明示的に文字列に変換されます"
+
+#: cattrs.preconf.pyyaml.configure_converter:5 of
+msgid "datetimes and dates are validated"
+msgstr "日時と日付は検証されます"
+
+#: ../../downloads/cattrs/docs/cattrs.preconf.rst:69
+msgid "cattrs.preconf.tomlkit module"
+msgstr "cattrs.preconf.tomlkit モジュール"
+
+#: cattrs.preconf.tomlkit:1 of
+msgid "Preconfigured converters for tomlkit."
+msgstr "tomlkit 用にあらかじめ設定されたコンバーター。"
+
+#: cattrs.preconf.tomlkit.configure_converter:1 of
+msgid "Configure the converter for use with the tomlkit library."
+msgstr "tomlkit ライブラリで使用するようにコンバーターを設定します。"
+
+#: cattrs.preconf.tomlkit.configure_converter:5 of
+msgid "tuples are serializas as lists"
+msgstr "タプルはリストとしてシリアライズされます"
+
+#: ../../downloads/cattrs/docs/cattrs.preconf.rst:77
+msgid "cattrs.preconf.ujson module"
+msgstr "cattrs.preconf.ujson モジュール"
+
+#: cattrs.preconf.ujson:1 of
+msgid "Preconfigured converters for ujson."
+msgstr "ujson 用にあらかじめ設定されたコンバーター。"
+
+#: cattrs.preconf.ujson.configure_converter:1 of
+msgid "Configure the converter for use with the ujson library."
+msgstr "ujson ライブラリで使用するようにコンバーターを設定します。"
+
+#: cattrs.preconf.ujson.configure_converter:3 of
+msgid "bytes are serialized as base64 strings"
+msgstr "バイトは base64 文字列としてシリアライズされます"
+

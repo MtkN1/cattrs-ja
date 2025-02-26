@@ -1,0 +1,262 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Tin Tvrtković
+# This file is distributed under the same license as the cattrs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: cattrs 24.1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-24 22:39+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../downloads/cattrs/docs/preconf.md:1
+msgid "Preconfigured Converters"
+msgstr "事前構成されたコンバーター"
+
+#: ../../downloads/cattrs/docs/preconf.md:3
+#, python-brace-format
+msgid "The {mod}`cattrs.preconf` package contains factories for preconfigured converters, specifically adjusted for particular serialization libraries."
+msgstr " {mod}`cattrs.preconf` パッケージには、特定のシリアライゼーション・ライブラリーに合わせて調整された、事前構成済みのコンバーターのファクトリーが含まれています。"
+
+#: ../../downloads/cattrs/docs/preconf.md:5
+msgid "For example, to get a converter configured for BSON:"
+msgstr "例えば、BSON 用に構成されたコンバーターを取得するには:"
+
+#: ../../downloads/cattrs/docs/preconf.md:14
+msgid "Converters obtained this way can be customized further, just like any other converter."
+msgstr "この方法で取得したコンバーターは、他のコンバーターと同様に、さらにカスタマイズできます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:16
+msgid "These converters support all [default hooks](defaulthooks.md) and the following additional classes and type annotations, both for structuring and unstructuring:"
+msgstr "これらのコンバーターは、すべての[デフォルト・フック](defaulthooks.md)と、構造化と非構造化の両方について、以下の追加クラスと型アノテーションをサポートします:"
+
+#: ../../downloads/cattrs/docs/preconf.md:20
+msgid "`datetime.datetime`, `datetime.date`"
+msgstr "`datetime.datetime` 、 `datetime.date`"
+
+#: ../../downloads/cattrs/docs/preconf.md:23
+msgid "All preconf converters now have `loads` and `dumps` methods, which combine un/structuring and the de/serialization logic from their underlying libraries."
+msgstr "すべての preconf コンバーターは、`loads` メソッドと `dumps` メソッドを持つようになりました。これらのメソッドは、un/structuring と、基盤となるライブラリーからのデ/シリアライゼーション・ロジックを組み合わせたものです。"
+
+#: ../../downloads/cattrs/docs/preconf.md:40
+msgid "Particular libraries may have additional constraints documented below."
+msgstr "特定のライブラリーには、以下に記載されている追加の制約がある場合があります。"
+
+#: ../../downloads/cattrs/docs/preconf.md:42
+#, python-brace-format
+msgid "Third-party libraries can be specified as optional (extra) dependencies on _cattrs_ during installation. Optional install targets should match the name of the {mod}`cattrs.preconf` modules."
+msgstr "サードパーティー・ライブラリーは、インストール中に _cattrs_ のオプション (extra) の依存関係として指定できます。オプションのインストール・ターゲットは、{mod}`cattrs.preconf` モジュールの名前と一致する必要があります。"
+
+#: ../../downloads/cattrs/docs/preconf.md:57
+msgid "Standard Library _json_"
+msgstr "標準ライブラリー _json_"
+
+#: ../../downloads/cattrs/docs/preconf.md:59
+#, python-brace-format
+msgid "Found at {mod}`cattrs.preconf.json`."
+msgstr "{mod}`cattrs.preconf.json` にあります。"
+
+#: ../../downloads/cattrs/docs/preconf.md:61
+msgid "Bytes are serialized as base 85 strings. Counters are serialized as dictionaries. Sets are serialized as lists, and deserialized back into sets. `datetime` s and `date` s are serialized as ISO 8601 strings."
+msgstr "バイト列は base 85 文字列としてシリアライズされます。カウンターは辞書としてシリアライズされます。セットはリストとしてシリアライズされ、セットにデシリアライズされます。`datetime` と `date` は ISO 8601 文字列としてシリアライズされます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:64
+msgid "_orjson_"
+msgstr "_orjson_"
+
+#: ../../downloads/cattrs/docs/preconf.md:66
+#, python-brace-format
+msgid "Found at {mod}`cattrs.preconf.orjson`."
+msgstr "{mod}`cattrs.preconf.orjson` にあります。"
+
+#: ../../downloads/cattrs/docs/preconf.md:68
+msgid "Bytes are un/structured as base 85 strings. Sets are unstructured into lists, and structured back into sets. `datetime` s and `date` s are passed through to be unstructured into RFC 3339 by _orjson_ itself. Typed named tuples are unstructured into ordinary tuples, and then into JSON arrays by _orjson_."
+msgstr "バイト列は base 85 文字列として un/structured されます。セットはリストに unstructured され、セットに structured されます。`datetime` と `date` は、_orjson_ 自体によって RFC 3339 に unstructured されるように渡されます。型付き名前付きタプルは、通常のタプルに unstructured され、_orjson_ によって JSON 配列に unstructured されます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:73
+msgid "_orjson_ doesn't support integers less than -9223372036854775808, and greater than 9223372036854775807. _orjson_ only supports mappings with string keys so mappings will have their keys stringified before serialization, and destringified during deserialization."
+msgstr "_orjson_ は、-9223372036854775808 未満、および 9223372036854775807 より大きい整数をサポートしていません。_orjson_ は文字列キーを持つマッピングのみをサポートしているため、マッピングはシリアライズ前にキーが文字列化され、デシリアライズ中に非文字列化されます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:77
+msgid "_msgspec_"
+msgstr "_msgspec_"
+
+#: ../../downloads/cattrs/docs/preconf.md:79
+#, python-brace-format
+msgid "Found at {mod}`cattrs.preconf.msgspec`. Only JSON functionality is currently available, other formats supported by msgspec to follow in the future."
+msgstr "{mod}`cattrs.preconf.msgspec` にあります。現在、JSON 機能のみが利用可能で、msgspec でサポートされている他の形式は将来提供される予定です。"
+
+#: ../../downloads/cattrs/docs/preconf.md:82
+msgid "[_msgspec_ structs](https://jcristharif.com/msgspec/structs.html) are supported, but not composable - a struct will be handed over to _msgspec_ directly, and _msgspec_ will handle and all of its fields, recursively. _cattrs_ may get more sophisticated handling of structs in the future."
+msgstr "[_msgspec_ 構造体](https://jcristharif.com/msgspec/structs.html) はサポートされていますが、構成可能ではありません。構造体は _msgspec_ に直接渡され、_msgspec_ はそのすべてのフィールドを再帰的に処理します。_cattrs_ は、将来、構造体のより高度な処理を取得する可能性があります。"
+
+#: ../../downloads/cattrs/docs/preconf.md:85
+#, python-brace-format
+msgid "[_msgspec_ strict mode](https://jcristharif.com/msgspec/usage.html#strict-vs-lax-mode) is used by default. This can be customized by changing the {meth}`encoder <cattrs.preconf.msgspec.MsgspecJsonConverter.encoder>` attribute on the converter."
+msgstr "[_msgspec_ strict mode](https://jcristharif.com/msgspec/usage.html#strict-vs-lax-mode) がデフォルトで使用されます。これは、コンバーターの {meth}`encoder <cattrs.preconf.msgspec.MsgspecJsonConverter.encoder>` 属性を変更することでカスタマイズできます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:88
+msgid "What _cattrs_ calls _unstructuring_ and _structuring_, _msgspec_ calls [`to_builtins` and `convert`](https://jcristharif.com/msgspec/converters.html). What _cattrs_ refers to as _dumping_ and _loading_, _msgspec_ refers to as [`encoding` and `decoding`](https://jcristharif.com/msgspec/usage.html)."
+msgstr "_cattrs_ が _unstructuring_ および _structuring_ と呼ぶものを、_msgspec_ は [`to_builtins` および `convert`](https://jcristharif.com/msgspec/converters.html) と呼びます。_cattrs_ が _dumping_ および _loading_ と呼ぶものを、_msgspec_ は [`encoding` および `decoding`](https://jcristharif.com/msgspec/usage.html) と呼びます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:91
+msgid "Compatibility notes:"
+msgstr "互換性に関する注意:"
+
+#: ../../downloads/cattrs/docs/preconf.md:92
+msgid "Bytes are un/structured as base 64 strings directly by _msgspec_ itself."
+msgstr "バイト列は、_msgspec_ 自体によって base 64 文字列として直接 un/structured されます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:93
+msgid "_msgspec_ [encodes special float values](https://jcristharif.com/msgspec/supported-types.html#float) (`NaN, Inf, -Inf`) as `null`."
+msgstr "_msgspec_ は、[特殊な浮動小数点値](https://jcristharif.com/msgspec/supported-types.html#float) (`NaN, Inf, -Inf`) を `null` としてエンコードします。"
+
+#: ../../downloads/cattrs/docs/preconf.md:94
+msgid "`datetime` s and `date` s are passed through to be unstructured into RFC 3339 by _msgspec_ itself."
+msgstr "`datetime` と `date` は、_msgspec_ 自体によって RFC 3339 に unstructured されるように渡されます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:95
+msgid "_attrs_ classes, dataclasses and sequences are handled directly by _msgspec_ if possible, otherwise by the normal _cattrs_ machinery. This means it's possible the validation errors produced may be _msgspec_ validation errors instead of _cattrs_ validation errors."
+msgstr "_attrs_ クラス、dataclass、およびシーケンスは、可能であれば _msgspec_ によって直接処理され、それ以外の場合は通常の _cattrs_ メカニズムによって処理されます。これは、生成される検証エラーが _cattrs_ 検証エラーではなく、_msgspec_ 検証エラーである可能性があることを意味します。"
+
+#: ../../downloads/cattrs/docs/preconf.md:98
+#, python-brace-format
+msgid "This converter supports {meth}`get_loads_hook() <cattrs.preconf.msgspec.MsgspecJsonConverter.get_loads_hook>` and {meth}`get_dumps_hook() <cattrs.preconf.msgspec.MsgspecJsonConverter.get_loads_hook>`. These are factories for dumping and loading functions (as opposed to unstructuring and structuring); the hooks returned by this may be further optimized to offload as much work as possible to _msgspec_."
+msgstr "このコンバーターは、{meth}`get_loads_hook() <cattrs.preconf.msgspec.MsgspecJsonConverter.get_loads_hook>` と {meth}`get_dumps_hook() <cattrs.preconf.msgspec.MsgspecJsonConverter.get_loads_hook>` をサポートしています。これらは、(unstructuring および structuring とは対照的に) dumping および loading 関数のファクトリーです。これによって返されるフックは、可能な限り多くの作業を _msgspec_ にオフロードするようにさらに最適化される場合があります。"
+
+#: ../../downloads/cattrs/docs/preconf.md:115
+msgid "Due to its complexity, this converter is currently _provisional_ and may slightly change as the best integration patterns are discovered."
+msgstr "その複雑さから、このコンバーターは現在 _provisional_ であり、最適な統合パターンが発見されるにつれてわずかに変更される可能性があります。"
+
+#: ../../downloads/cattrs/docs/preconf.md:117
+msgid "_msgspec_ doesn't support PyPy."
+msgstr "_msgspec_ は PyPy をサポートしていません。"
+
+#: ../../downloads/cattrs/docs/preconf.md:123
+msgid "_ujson_"
+msgstr "_ujson_"
+
+#: ../../downloads/cattrs/docs/preconf.md:125
+#, python-brace-format
+msgid "Found at {mod}`cattrs.preconf.ujson`."
+msgstr "{mod}`cattrs.preconf.ujson` にあります。"
+
+#: ../../downloads/cattrs/docs/preconf.md:127
+msgid "Bytes are serialized as base 85 strings. Sets are serialized as lists, and deserialized back into sets. `datetime` s and `date` s are serialized as ISO 8601 strings."
+msgstr "バイト列は base 85 文字列としてシリアライズされます。セットはリストとしてシリアライズされ、セットにデシリアライズされます。`datetime` と `date` は ISO 8601 文字列としてシリアライズされます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:129
+msgid "_ujson_ doesn't support integers less than -9223372036854775808, and greater than 9223372036854775807, nor does it support `float('inf')`."
+msgstr "_ujson_ は、-9223372036854775808 未満、および 9223372036854775807 より大きい整数をサポートしていません。また、`float('inf')` もサポートしていません。"
+
+#: ../../downloads/cattrs/docs/preconf.md:132
+msgid "_msgpack_"
+msgstr "_msgpack_"
+
+#: ../../downloads/cattrs/docs/preconf.md:134
+#, python-brace-format
+msgid "Found at {mod}`cattrs.preconf.msgpack`."
+msgstr "{mod}`cattrs.preconf.msgpack` にあります。"
+
+#: ../../downloads/cattrs/docs/preconf.md:136
+msgid "Sets are serialized as lists, and deserialized back into sets. `datetime` s are serialized as UNIX timestamp float values. `date` s are serialized as midnight-aligned UNIX timestamp float values."
+msgstr "セットはリストとしてシリアライズされ、セットにデシリアライズされます。`datetime` は UNIX タイムスタンプの浮動小数点値としてシリアライズされます。`date` は、真夜中にアラインされた UNIX タイムスタンプの浮動小数点値としてシリアライズされます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:138
+msgid "_msgpack_ doesn't support integers less than -9223372036854775808, and greater than 18446744073709551615."
+msgstr "_msgpack_ は、-9223372036854775808 未満、および 18446744073709551615 より大きい整数をサポートしていません。"
+
+#: ../../downloads/cattrs/docs/preconf.md:140
+msgid "When parsing msgpack data from bytes, the library needs to be passed `strict_map_key=False` to get the full range of compatibility."
+msgstr "バイト列から msgpack データを解析する場合、ライブラリーに `strict_map_key=False` を渡して、完全な互換性を得る必要があります。"
+
+#: ../../downloads/cattrs/docs/preconf.md:143
+msgid "_cbor2_"
+msgstr "_cbor2_"
+
+#: ../../downloads/cattrs/docs/preconf.md:145
+#, python-brace-format
+msgid "Found at {mod}`cattrs.preconf.cbor2`."
+msgstr "{mod}`cattrs.preconf.cbor2` にあります。"
+
+#: ../../downloads/cattrs/docs/preconf.md:147
+msgid "_cbor2_ implements a fully featured CBOR encoder with several extensions for handling shared references, big integers, rational numbers and so on."
+msgstr "_cbor2_ は、共有参照、大きな整数、有理数などを処理するためのいくつかの拡張機能を備えた、フル機能の CBOR エンコーダーを実装しています。"
+
+#: ../../downloads/cattrs/docs/preconf.md:149
+msgid "Sets are serialized and deserialized to sets. Tuples are serialized as lists."
+msgstr "セットはシリアライズおよびデシリアライズされてセットになります。タプルはリストとしてシリアライズされます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:152
+msgid "`datetime` s are serialized as a text string by default (CBOR Tag 0). Use keyword argument `datetime_as_timestamp=True` to encode as UNIX timestamp integer/float (CBOR Tag 1) **note:** this replaces timezone information as UTC."
+msgstr "`datetime` は、デフォルトでテキスト文字列としてシリアライズされます (CBOR Tag 0)。キーワード引数 `datetime_as_timestamp=True` を使用して、UNIX タイムスタンプの整数/浮動小数点としてエンコードします (CBOR Tag 1) **注:** これはタイムゾーン情報を UTC として置き換えます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:156
+msgid "`date` s are serialized as ISO 8601 strings."
+msgstr "`date` は ISO 8601 文字列としてシリアライズされます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:158
+msgid "Use keyword argument `canonical=True` for efficient encoding to the smallest binary output."
+msgstr "最小のバイナリー出力への効率的なエンコードには、キーワード引数 `canonical=True` を使用します。"
+
+#: ../../downloads/cattrs/docs/preconf.md:160
+msgid "Floats can be forced to smaller output by casting to lower-precision formats by casting to `numpy` floats (and back to Python floats). Example: `float(np.float32(value))` or `float(np.float16(value))`"
+msgstr "浮動小数点数は、`numpy` 浮動小数点数にキャスト (および Python 浮動小数点数に戻す) ことにより、低精度の形式にキャストすることで、より小さな出力に強制できます。例: `float(np.float32(value))` または `float(np.float16(value))`"
+
+#: ../../downloads/cattrs/docs/preconf.md:167
+msgid "_bson_"
+msgstr "_bson_"
+
+#: ../../downloads/cattrs/docs/preconf.md:169
+#, python-brace-format
+msgid "Found at {mod}`cattrs.preconf.bson`. Tested against the _bson_ module bundled with the _pymongo_ library, not the standalone PyPI _bson_ package."
+msgstr "{mod}`cattrs.preconf.bson` にあります。スタンドアロンの PyPI _bson_ パッケージではなく、_pymongo_ ライブラリーにバンドルされている _bson_ モジュールに対してテスト済み。"
+
+#: ../../downloads/cattrs/docs/preconf.md:171
+msgid "Sets are serialized as lists, and deserialized back into sets."
+msgstr "セットはリストとしてシリアライズされ、セットにデシリアライズされます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:173
+msgid "_bson_ doesn't support integers less than -9223372036854775808 or greater than 9223372036854775807 (64-bit signed). _bson_ does not support null bytes in mapping keys. _bson_ only supports mappings with string keys so mappings will have their keys stringified before serialization, and destringified during deserialization. The _bson_ datetime representation doesn't support microsecond accuracy. `date` s are serialized as ISO 8601 strings."
+msgstr "_bson_ は、-9223372036854775808 未満または 9223372036854775807 (64 ビット符号付き) より大きい整数をサポートしていません。_bson_ は、マッピング・キーの NULL バイトをサポートしていません。_bson_ は文字列キーを持つマッピングのみをサポートしているため、マッピングはシリアライズ前にキーが文字列化され、デシリアライズ中に非文字列化されます。_bson_ の datetime 表現は、マイクロ秒の精度をサポートしていません。`date` は ISO 8601 文字列としてシリアライズされます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:179
+msgid "When encoding and decoding, the library needs to be passed `codec_options=bson.CodecOptions(tz_aware=True)` to get the full range of compatibility."
+msgstr "エンコードおよびデコードする場合、ライブラリーに `codec_options=bson.CodecOptions(tz_aware=True)` を渡して、完全な互換性を得る必要があります。"
+
+#: ../../downloads/cattrs/docs/preconf.md:182
+msgid "_pyyaml_"
+msgstr "_pyyaml_"
+
+#: ../../downloads/cattrs/docs/preconf.md:184
+#, python-brace-format
+msgid "Found at {mod}`cattrs.preconf.pyyaml`."
+msgstr "{mod}`cattrs.preconf.pyyaml` にあります。"
+
+#: ../../downloads/cattrs/docs/preconf.md:186
+msgid "Frozensets are serialized as lists, and deserialized back into frozensets. `date` s are serialized as ISO 8601 strings. Typed named tuples are unstructured into ordinary tuples, and then into YAML arrays by _pyyaml_."
+msgstr "Frozenset はリストとしてシリアライズされ、frozenset にデシリアライズされます。`date` は ISO 8601 文字列としてシリアライズされます。型付き名前付きタプルは、通常のタプルに unstructured され、_pyyaml_ によって YAML 配列に unstructured されます。"
+
+#: ../../downloads/cattrs/docs/preconf.md:190
+msgid "_tomlkit_"
+msgstr "_tomlkit_"
+
+#: ../../downloads/cattrs/docs/preconf.md:192
+#, python-brace-format
+msgid "Found at {mod}`cattrs.preconf.tomlkit`."
+msgstr "{mod}`cattrs.preconf.tomlkit` にあります。"
+
+#: ../../downloads/cattrs/docs/preconf.md:194
+msgid "Bytes are serialized as base 85 strings. Sets are serialized as lists, and deserialized back into sets. Tuples are serialized as lists, and deserialized back into tuples. _tomlkit_ only supports mappings with string keys so mappings will have their keys stringified before serialization, and destringified during deserialization. `date` s are serialized as ISO 8601 strings."
+msgstr "バイト列は base 85 文字列としてシリアライズされます。セットはリストとしてシリアライズされ、セットにデシリアライズされます。タプルはリストとしてシリアライズされ、タプルにデシリアライズされます。_tomlkit_ は文字列キーを持つマッピングのみをサポートしているため、マッピングはシリアライズ前にキーが文字列化され、デシリアライズ中に非文字列化されます。`date` は ISO 8601 文字列としてシリアライズされます。"
+
